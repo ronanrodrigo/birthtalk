@@ -1,0 +1,24 @@
+opt_in_rules:
+  - mark
+  - private_outlet
+  - vertical_whitespace
+
+excluded:
+  - Carthage
+  - Pods
+
+line_length:
+  warning: 120
+  error: 120
+
+private_outlet:
+  severity: error
+
+mark:
+  severity: error
+
+vertical_whitespace:
+  severity: error
+
+type_name:
+  max_length: 60
