@@ -13,13 +13,13 @@ class RegisterUserUsecaseTests: XCTestCase {
 
     var usecase: RegisterUserUsecase!
     var presenter: RegisterUserPresenterStub!
+    var gateway: AuthenticationGatewayStub!
 
     override func setUp() {
+        gateway = AuthenticationGatewayStub()
         presenter = RegisterUserPresenterStub()
-        usecase = RegisterUserUsecase(presenter: presenter)
+        usecase = RegisterUserUsecase(presenter: presenter, gateway: gateway)
     }
-
-    // MARK: - Validate inputs tests
 
     func testRegisterAnUserWithEmptyEmailDisplayEmailErrorMessage() {
         usecase.register(name: validName, email: empty, password: validPassword, birthdate: validDate)
@@ -27,6 +27,8 @@ class RegisterUserUsecaseTests: XCTestCase {
         XCTAssertTrue(presenter.shownInvalidEmailErrorMessage)
         XCTAssertFalse(presenter.shownEmptyNameErrorMessage)
         XCTAssertFalse(presenter.shownInvalidPasswordErrorMessage)
+        XCTAssertFalse(presenter.shownRegistredUser)
+        XCTAssertNil(gateway.registeredUser)
     }
 
     func testRegisterAnUserWithInvalidEmailDisplayEmailErrorMessage() {
@@ -35,6 +37,8 @@ class RegisterUserUsecaseTests: XCTestCase {
         XCTAssertTrue(presenter.shownInvalidEmailErrorMessage)
         XCTAssertFalse(presenter.shownEmptyNameErrorMessage)
         XCTAssertFalse(presenter.shownInvalidPasswordErrorMessage)
+        XCTAssertFalse(presenter.shownRegistredUser)
+        XCTAssertNil(gateway.registeredUser)
     }
 
     func testRegisterAnUserWithEmptyNameDisplayNameErrorMessage() {
@@ -43,6 +47,8 @@ class RegisterUserUsecaseTests: XCTestCase {
         XCTAssertTrue(presenter.shownEmptyNameErrorMessage)
         XCTAssertFalse(presenter.shownInvalidEmailErrorMessage)
         XCTAssertFalse(presenter.shownInvalidPasswordErrorMessage)
+        XCTAssertFalse(presenter.shownRegistredUser)
+        XCTAssertNil(gateway.registeredUser)
     }
 
     func testRegisterAnUserWithEmptyPasswordDisplayPasswordErrorMessage() {
@@ -51,6 +57,8 @@ class RegisterUserUsecaseTests: XCTestCase {
         XCTAssertTrue(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertFalse(presenter.shownInvalidEmailErrorMessage)
         XCTAssertFalse(presenter.shownEmptyNameErrorMessage)
+        XCTAssertFalse(presenter.shownRegistredUser)
+        XCTAssertNil(gateway.registeredUser)
     }
 
     func testRegisterAnUserWithoutAtLeastFiveCharactersInThePasswordDisplayPasswordErrorMessage() {
@@ -59,6 +67,8 @@ class RegisterUserUsecaseTests: XCTestCase {
         XCTAssertTrue(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertFalse(presenter.shownInvalidEmailErrorMessage)
         XCTAssertFalse(presenter.shownEmptyNameErrorMessage)
+        XCTAssertFalse(presenter.shownRegistredUser)
+        XCTAssertNil(gateway.registeredUser)
     }
 
     func testRegisterAnUserWithAllEmptyInputDisplayAllErrorMessages() {
@@ -67,6 +77,8 @@ class RegisterUserUsecaseTests: XCTestCase {
         XCTAssertTrue(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertTrue(presenter.shownInvalidEmailErrorMessage)
         XCTAssertTrue(presenter.shownEmptyNameErrorMessage)
+        XCTAssertFalse(presenter.shownRegistredUser)
+        XCTAssertNil(gateway.registeredUser)
     }
 
     func testRegisterAnUserWithAllInvalidInputDisplayAllErrorMessages() {
@@ -75,11 +87,19 @@ class RegisterUserUsecaseTests: XCTestCase {
         XCTAssertTrue(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertTrue(presenter.shownInvalidEmailErrorMessage)
         XCTAssertTrue(presenter.shownEmptyNameErrorMessage)
+        XCTAssertFalse(presenter.shownRegistredUser)
+        XCTAssertNil(gateway.registeredUser)
     }
 
-    func testRegisterAnUserWhenValidInputsDoesNotDisplayErroMessages() {
-        usecase.register(name: validName, email: validMail, password: validPassword, birthdate: validDate)
+    func testRegisterAnUserWithValidInputSaveDataAndPresentSuccessMessage() {
+        let user = UserEntity(identifier: nil, name: validName, email: validMail, password: validPassword,
+                              birthdate: validDate)
 
+        usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
+
+        XCTAssertNotNil(gateway.registeredUser)
+        XCTAssertEqual(gateway.registeredUser!, user)
+        XCTAssertTrue(presenter.shownRegistredUser)
         XCTAssertFalse(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertFalse(presenter.shownInvalidEmailErrorMessage)
         XCTAssertFalse(presenter.shownEmptyNameErrorMessage)
