@@ -12,13 +12,13 @@ struct RegisterUserUsecase {
     }
 
     private func isValidInputs(name: String, email: String, password: String, birthdate: Date) -> Bool {
-        var invalidMessages = [() -> Void]()
-        if name.isEmpty { invalidMessages.append(presenter.invalidName) }
-        if password.characters.count < 5 { invalidMessages.append(presenter.invalidPassword) }
-        if email.isEmpty { invalidMessages.append(presenter.invalidEmail) }
-        if !isValidEmail(email: email) { invalidMessages.append(presenter.invalidEmail) }
+        var invalidMessages = [UserFormErrors]()
+        if name.isEmpty { invalidMessages.append(.invalidName) }
+        if password.characters.count < 5 { invalidMessages.append(.invalidPassword) }
+        if email.isEmpty { invalidMessages.append(.invalidEmail) }
+        if !isValidEmail(email: email) { invalidMessages.append(.invalidEmail) }
         guard invalidMessages.count > 0 else { return true }
-        invalidMessages.forEach { $0() }
+        invalidMessages.forEach(presenter.failure)
         return false
     }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		340687551E31744500B5B0E2 /* UserFormErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340687541E31744500B5B0E2 /* UserFormErrors.swift */; };
 		341B09271E310EA6009DFC9A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B09261E310EA6009DFC9A /* User.swift */; };
 		341B092E1E311214009DFC9A /* AuthenticationGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B092D1E311214009DFC9A /* AuthenticationGateway.swift */; };
 		341B09311E3113E3009DFC9A /* AuthenticationGatewayStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B09301E3113E3009DFC9A /* AuthenticationGatewayStub.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		340687541E31744500B5B0E2 /* UserFormErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFormErrors.swift; sourceTree = "<group>"; };
 		341B09261E310EA6009DFC9A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		341B092D1E311214009DFC9A /* AuthenticationGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationGateway.swift; sourceTree = "<group>"; };
 		341B09301E3113E3009DFC9A /* AuthenticationGatewayStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationGatewayStub.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				341B09261E310EA6009DFC9A /* User.swift */,
+				340687541E31744500B5B0E2 /* UserFormErrors.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3449A3331E304A8D005A6755 /* AppDelegate.swift in Sources */,
+				340687551E31744500B5B0E2 /* UserFormErrors.swift in Sources */,
 				341B09271E310EA6009DFC9A /* User.swift in Sources */,
 				34B196311E305B1B009587C8 /* RegisterUserPresenter.swift in Sources */,
 				341B092E1E311214009DFC9A /* AuthenticationGateway.swift in Sources */,

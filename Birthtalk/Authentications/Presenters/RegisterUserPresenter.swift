@@ -1,6 +1,4 @@
 protocol RegisterUserPresenter {
-    func invalidEmail()
-    func invalidName()
-    func invalidPassword()
     func success()
+    func failure(error: UserFormErrors)
 }
