@@ -69,7 +69,6 @@
 			children = (
 				341B09261E310EA6009DFC9A /* User.swift */,
 			);
-			name = Entities;
 			path = Entities;
 			sourceTree = "<group>";
 		};
@@ -78,7 +77,6 @@
 			children = (
 				341B092D1E311214009DFC9A /* AuthenticationGateway.swift */,
 			);
-			name = Gateways;
 			path = Gateways;
 			sourceTree = "<group>";
 		};
@@ -87,7 +85,6 @@
 			children = (
 				341B09301E3113E3009DFC9A /* AuthenticationGatewayStub.swift */,
 			);
-			name = Gateways;
 			path = Gateways;
 			sourceTree = "<group>";
 		};
@@ -217,7 +214,7 @@
 				3449A32B1E304A8D005A6755 /* Sources */,
 				3449A32C1E304A8D005A6755 /* Frameworks */,
 				3449A32D1E304A8D005A6755 /* Resources */,
-				34B196291E30522A009587C8 /* Swift Lint */,
+				34B196291E30522A009587C8 /* Swift Lint - Birthtalk */,
 			);
 			buildRules = (
 			);
@@ -235,7 +232,7 @@
 				3449A33F1E304A8D005A6755 /* Sources */,
 				3449A3401E304A8D005A6755 /* Frameworks */,
 				3449A3411E304A8D005A6755 /* Resources */,
-				34B1962A1E305249009587C8 /* Swift Lint */,
+				34B1962A1E305249009587C8 /* Swift Lint - BirthtalkTests */,
 			);
 			buildRules = (
 			);
@@ -310,33 +307,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		34B196291E30522A009587C8 /* Swift Lint */ = {
+		34B196291E30522A009587C8 /* Swift Lint - Birthtalk */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Swift Lint";
+			name = "Swift Lint - Birthtalk";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed!\"\nfi";
+			shellScript = "if [ \"$IGNORE_SWIFT_LINT\" == \"\" ]; then\n    if which swiftlint >/dev/null; then\n        swiftlint\n    else\n        echo \"warning: SwiftLint not installed!\"\n    fi\nfi";
 		};
-		34B1962A1E305249009587C8 /* Swift Lint */ = {
+		34B1962A1E305249009587C8 /* Swift Lint - BirthtalkTests */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Swift Lint";
+			name = "Swift Lint - BirthtalkTests";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed!\"\nfi";
+			shellScript = "if [ \"$IGNORE_SWIFT_LINT\" == \"\" ]; then\n    if which swiftlint >/dev/null; then\n        swiftlint\n    else\n        echo \"warning: SwiftLint not installed!\"\n    fi\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 

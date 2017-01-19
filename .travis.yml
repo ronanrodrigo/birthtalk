@@ -1,12 +1,11 @@
 language: objective-c
 osx_image: xcode8.2
 cache:
-- bundler
+  - bundler
 before_install:
-- bundle install --without=documentation
-- brew update && brew unlink swiftlint && brew install swiftlint
+  - bundle install --without=documentation
 script:
-- fastlane test
-- bundle exec danger
+  - bundle exec fastlane test
+  - bundle exec danger
 after_success:
   - bash <(curl -s https://codecov.io/bash)
