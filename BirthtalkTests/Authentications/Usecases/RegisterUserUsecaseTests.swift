@@ -21,7 +21,7 @@ class RegisterUserUsecaseTests: XCTestCase {
 
     // MARK: - Validate inputs tests
 
-    func testDoNotRegisterAnUserWithEmptyEmail() {
+    func testRegisterAnUserWithEmptyEmailDisplayEmailErrorMessage() {
         usecase.register(name: validName, email: empty, password: validPassword, birthdate: validDate)
 
         XCTAssertTrue(presenter.shownInvalidEmailErrorMessage)
@@ -29,7 +29,7 @@ class RegisterUserUsecaseTests: XCTestCase {
         XCTAssertFalse(presenter.shownInvalidPasswordErrorMessage)
     }
 
-    func testDoNotRegisterAnUserWithInvalidEmail() {
+    func testRegisterAnUserWithInvalidEmailDisplayEmailErrorMessage() {
         usecase.register(name: validName, email: invalidEmail, password: validPassword, birthdate: validDate)
 
         XCTAssertTrue(presenter.shownInvalidEmailErrorMessage)
@@ -37,7 +37,7 @@ class RegisterUserUsecaseTests: XCTestCase {
         XCTAssertFalse(presenter.shownInvalidPasswordErrorMessage)
     }
 
-    func testDoNotRegisterAnUserWithEmptyName() {
+    func testRegisterAnUserWithEmptyNameDisplayNameErrorMessage() {
         usecase.register(name: empty, email: validMail, password: validPassword, birthdate: validDate)
 
         XCTAssertTrue(presenter.shownEmptyNameErrorMessage)
@@ -45,7 +45,7 @@ class RegisterUserUsecaseTests: XCTestCase {
         XCTAssertFalse(presenter.shownInvalidPasswordErrorMessage)
     }
 
-    func testDoNotRegisterAnUserEmptyPassword() {
+    func testRegisterAnUserWithEmptyPasswordDisplayPasswordErrorMessage() {
         usecase.register(name: validName, email: validMail, password: empty, birthdate: validDate)
 
         XCTAssertTrue(presenter.shownInvalidPasswordErrorMessage)
@@ -53,7 +53,7 @@ class RegisterUserUsecaseTests: XCTestCase {
         XCTAssertFalse(presenter.shownEmptyNameErrorMessage)
     }
 
-    func testDoNotRegisterAnUserWithoutAtLeastFiveCharactersInThePassword() {
+    func testRegisterAnUserWithoutAtLeastFiveCharactersInThePasswordDisplayPasswordErrorMessage() {
         usecase.register(name: validName, email: validMail, password: smallPassword, birthdate: validDate)
 
         XCTAssertTrue(presenter.shownInvalidPasswordErrorMessage)
@@ -61,7 +61,7 @@ class RegisterUserUsecaseTests: XCTestCase {
         XCTAssertFalse(presenter.shownEmptyNameErrorMessage)
     }
 
-    func testDoNotRegisterAnUserWithAllEmptyFields() {
+    func testRegisterAnUserWithAllEmptyInputDisplayAllErrorMessages() {
         usecase.register(name: empty, email: empty, password: empty, birthdate: validDate)
 
         XCTAssertTrue(presenter.shownInvalidPasswordErrorMessage)
@@ -69,12 +69,20 @@ class RegisterUserUsecaseTests: XCTestCase {
         XCTAssertTrue(presenter.shownEmptyNameErrorMessage)
     }
 
-    func testDoNotRegisterAnUserWithAllInvalidFields() {
+    func testRegisterAnUserWithAllInvalidInputDisplayAllErrorMessages() {
         usecase.register(name: empty, email: invalidEmail, password: smallPassword, birthdate: validDate)
 
         XCTAssertTrue(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertTrue(presenter.shownInvalidEmailErrorMessage)
         XCTAssertTrue(presenter.shownEmptyNameErrorMessage)
+    }
+
+    func testRegisterAnUserWhenValidInputsDoesNotDisplayErroMessages() {
+        usecase.register(name: validName, email: validMail, password: validPassword, birthdate: validDate)
+
+        XCTAssertFalse(presenter.shownInvalidPasswordErrorMessage)
+        XCTAssertFalse(presenter.shownInvalidEmailErrorMessage)
+        XCTAssertFalse(presenter.shownEmptyNameErrorMessage)
     }
 
 }
