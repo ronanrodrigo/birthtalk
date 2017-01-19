@@ -8,7 +8,7 @@ class RegisterUserPresenterStub: RegisterUserPresenter {
     var shownInvalidPasswordErrorMessage = false
     var shownRegistredUser = false
 
-    func failure(error: UserFormErrors) {
+    func failure(error: RegisterError) {
         switch error {
         case .invalidEmail: shownInvalidEmailErrorMessage = true
         case .invalidName: shownEmptyNameErrorMessage = true

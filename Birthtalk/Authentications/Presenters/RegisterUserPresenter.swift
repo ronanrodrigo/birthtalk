@@ -1,4 +1,4 @@
 protocol RegisterUserPresenter {
     func success()
-    func failure(error: UserFormErrors)
+    func failure(error: RegisterError)
 }

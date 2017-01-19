@@ -1,3 +1,3 @@
-enum UserFormErrors: Error {
+enum RegisterError: Error {
     case invalidEmail, invalidName, invalidPassword
 }
