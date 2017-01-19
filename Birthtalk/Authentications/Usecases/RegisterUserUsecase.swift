@@ -10,11 +10,11 @@ struct RegisterUserUsecase {
 
     private func isValidInputs(name: String, email: String, password: String, birthdate: Date) -> Bool {
         var invalidMessages = [() -> Void]()
-        if name.isEmpty { invalidMessages.append(presenter.showEmptyNameMessage) }
-        if password.characters.count < 5 { invalidMessages.append(presenter.showInvalidPasswordMessage) }
-        if email.isEmpty { invalidMessages.append(presenter.showInvalidEmailMessage) }
-        if !isValidEmail(email: email) { invalidMessages.append(presenter.showInvalidEmailMessage) }
         guard invalidMessages.count > 0 else { return false }
+        if name.isEmpty { invalidMessages.append(presenter.invalidName) }
+        if password.characters.count < 5 { invalidMessages.append(presenter.invalidPassword) }
+        if email.isEmpty { invalidMessages.append(presenter.invalidEmail) }
+        if !isValidEmail(email: email) { invalidMessages.append(presenter.invalidEmail) }
         invalidMessages.forEach { $0() }
         return true
     }

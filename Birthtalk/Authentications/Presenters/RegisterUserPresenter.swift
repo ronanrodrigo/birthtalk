@@ -1,5 +1,5 @@
 protocol RegisterUserPresenter {
-    func showInvalidEmailMessage()
-    func showEmptyNameMessage()
-    func showInvalidPasswordMessage()
+    func invalidEmail()
+    func invalidName()
+    func invalidPassword()
 }
