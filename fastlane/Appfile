@@ -1,0 +1,3 @@
+app_identifier ENV["BIRTHTALK_ID"]
+apple_id ENV["APPLE_ID"]
+team_id ENV[DEV_PORTAL_TEAM_ID]
