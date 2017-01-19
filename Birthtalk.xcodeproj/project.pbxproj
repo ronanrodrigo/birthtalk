@@ -10,6 +10,10 @@
 		3449A3331E304A8D005A6755 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449A3321E304A8D005A6755 /* AppDelegate.swift */; };
 		3449A33A1E304A8D005A6755 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3449A3391E304A8D005A6755 /* Assets.xcassets */; };
 		3449A33D1E304A8D005A6755 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3449A33B1E304A8D005A6755 /* LaunchScreen.storyboard */; };
+		3449A3581E304D36005A6755 /* RegisterUserUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449A3571E304D36005A6755 /* RegisterUserUsecaseTests.swift */; };
+		34B1962E1E305AFE009587C8 /* RegisterUserUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B1962D1E305AFE009587C8 /* RegisterUserUsecase.swift */; };
+		34B196311E305B1B009587C8 /* RegisterUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B196301E305B1B009587C8 /* RegisterUserPresenter.swift */; };
+		34B196351E305B43009587C8 /* RegisterUserPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B196341E305B43009587C8 /* RegisterUserPresenterStub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +34,10 @@
 		3449A33E1E304A8D005A6755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3449A3431E304A8D005A6755 /* BirthtalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BirthtalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3449A3491E304A8E005A6755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3449A3571E304D36005A6755 /* RegisterUserUsecaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserUsecaseTests.swift; sourceTree = "<group>"; };
+		34B1962D1E305AFE009587C8 /* RegisterUserUsecase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserUsecase.swift; sourceTree = "<group>"; };
+		34B196301E305B1B009587C8 /* RegisterUserPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserPresenter.swift; sourceTree = "<group>"; };
+		34B196341E305B43009587C8 /* RegisterUserPresenterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserPresenterStub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,7 @@
 		3449A3311E304A8D005A6755 /* Birthtalk */ = {
 			isa = PBXGroup;
 			children = (
+				34B1962B1E305AEB009587C8 /* Authentications */,
 				3449A3521E304B56005A6755 /* Base */,
 			);
 			path = Birthtalk;
@@ -79,6 +88,7 @@
 		3449A3461E304A8E005A6755 /* BirthtalkTests */ = {
 			isa = PBXGroup;
 			children = (
+				3449A3551E304CED005A6755 /* Authentications */,
 				3449A3531E304B5C005A6755 /* Base */,
 			);
 			path = BirthtalkTests;
@@ -103,6 +113,71 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		3449A3551E304CED005A6755 /* Authentications */ = {
+			isa = PBXGroup;
+			children = (
+				34B196321E305B32009587C8 /* Mocks */,
+				3449A3561E304D00005A6755 /* Usecases */,
+			);
+			name = Authentications;
+			path = Authentications;
+			sourceTree = "<group>";
+		};
+		3449A3561E304D00005A6755 /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+				3449A3571E304D36005A6755 /* RegisterUserUsecaseTests.swift */,
+			);
+			name = Usecases;
+			path = Usecases;
+			sourceTree = "<group>";
+		};
+		34B1962B1E305AEB009587C8 /* Authentications */ = {
+			isa = PBXGroup;
+			children = (
+				34B1962F1E305B0D009587C8 /* Presenters */,
+				34B1962C1E305AF2009587C8 /* Usecases */,
+			);
+			name = Authentications;
+			path = Authentications;
+			sourceTree = "<group>";
+		};
+		34B1962C1E305AF2009587C8 /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+				34B1962D1E305AFE009587C8 /* RegisterUserUsecase.swift */,
+			);
+			name = Usecases;
+			path = Usecases;
+			sourceTree = "<group>";
+		};
+		34B1962F1E305B0D009587C8 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				34B196301E305B1B009587C8 /* RegisterUserPresenter.swift */,
+			);
+			name = Presenters;
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		34B196321E305B32009587C8 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				34B196331E305B37009587C8 /* Presenters */,
+			);
+			name = Mocks;
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		34B196331E305B37009587C8 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				34B196341E305B43009587C8 /* RegisterUserPresenterStub.swift */,
+			);
+			name = Presenters;
+			path = Presenters;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,6 +188,7 @@
 				3449A32B1E304A8D005A6755 /* Sources */,
 				3449A32C1E304A8D005A6755 /* Frameworks */,
 				3449A32D1E304A8D005A6755 /* Resources */,
+				34B196291E30522A009587C8 /* Swift Lint */,
 			);
 			buildRules = (
 			);
@@ -130,6 +206,7 @@
 				3449A33F1E304A8D005A6755 /* Sources */,
 				3449A3401E304A8D005A6755 /* Frameworks */,
 				3449A3411E304A8D005A6755 /* Resources */,
+				34B1962A1E305249009587C8 /* Swift Lint */,
 			);
 			buildRules = (
 			);
@@ -159,6 +236,7 @@
 					3449A3421E304A8D005A6755 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 2729VXDM4D;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3449A32E1E304A8D005A6755;
 					};
@@ -202,12 +280,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		34B196291E30522A009587C8 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed!\"\nfi";
+		};
+		34B1962A1E305249009587C8 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed!\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3449A32B1E304A8D005A6755 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3449A3331E304A8D005A6755 /* AppDelegate.swift in Sources */,
+				34B196311E305B1B009587C8 /* RegisterUserPresenter.swift in Sources */,
+				34B1962E1E305AFE009587C8 /* RegisterUserUsecase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +326,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34B196351E305B43009587C8 /* RegisterUserPresenterStub.swift in Sources */,
+				3449A3581E304D36005A6755 /* RegisterUserUsecaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,11 +480,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2729VXDM4D;
 				INFOPLIST_FILE = BirthtalkTests/Base/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.ronanrodrigo.BirthtalkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Birthtalk.app/Birthtalk";
 			};
@@ -382,6 +497,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2729VXDM4D;
 				INFOPLIST_FILE = BirthtalkTests/Base/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
