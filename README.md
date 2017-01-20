@@ -24,7 +24,7 @@ brew install swiftlint
 ```
 
 ## Tests
-This application use native tests library XCTest. And it is possible to run than with fastlane command.
+This application use native tests library XCTest. And it is possible to run that with fastlane command.
 
 ```shell
 bundle exec fastlane test
