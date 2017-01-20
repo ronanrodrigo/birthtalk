@@ -76,7 +76,6 @@
 				340687591E3178BC00B5B0E2 /* RequestError.swift */,
 				340687571E31782D00B5B0E2 /* Result.swift */,
 			);
-			name = Commons;
 			path = Commons;
 			sourceTree = "<group>";
 		};
@@ -232,7 +231,7 @@
 				3449A32B1E304A8D005A6755 /* Sources */,
 				3449A32C1E304A8D005A6755 /* Frameworks */,
 				3449A32D1E304A8D005A6755 /* Resources */,
-				34B196291E30522A009587C8 /* Swift Lint - Birthtalk */,
+				34B196291E30522A009587C8 /* Swift Lint */,
 			);
 			buildRules = (
 			);
@@ -250,7 +249,6 @@
 				3449A33F1E304A8D005A6755 /* Sources */,
 				3449A3401E304A8D005A6755 /* Frameworks */,
 				3449A3411E304A8D005A6755 /* Resources */,
-				34B1962A1E305249009587C8 /* Swift Lint - BirthtalkTests */,
 			);
 			buildRules = (
 			);
@@ -325,28 +323,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		34B196291E30522A009587C8 /* Swift Lint - Birthtalk */ = {
+		34B196291E30522A009587C8 /* Swift Lint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Swift Lint - Birthtalk";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ \"$IGNORE_SWIFT_LINT\" == \"\" ]; then\n    if which swiftlint >/dev/null; then\n        swiftlint\n    else\n        echo \"warning: SwiftLint not installed!\"\n    fi\nfi";
-		};
-		34B1962A1E305249009587C8 /* Swift Lint - BirthtalkTests */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Swift Lint - BirthtalkTests";
+			name = "Swift Lint";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

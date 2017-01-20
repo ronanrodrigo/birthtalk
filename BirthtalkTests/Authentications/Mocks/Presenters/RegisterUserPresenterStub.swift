@@ -16,7 +16,7 @@ class RegisterUserPresenterStub: RegisterUserPresenter {
         case .invalidPassword: shownInvalidPasswordErrorMessage = true
         }
     }
-    
+
     func failure(error: RequestError) {
         switch error {
         case .notConnectedToInternet: showInvalidRequestErrorMessage = true

@@ -9,8 +9,10 @@ struct RegisterUserUsecase {
         guard isValidInputs(name: name, email: email, password: password, birthdate: birthdate) else { return }
         gateway.register(name: name, email: email, password: password, birthdate: birthdate) { result in
             switch result {
-            case .success(_): presenter.success()
-            case let .failure(error): presenter.failure(error: error)
+            case .success:
+                presenter.success()
+            case let .failure(error):
+                presenter.failure(error: error)
             }
         }
     }
