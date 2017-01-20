@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01CB90662F09BFFB2B4E8F9C /* Pods_Birthtalk_BirthtalkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4CA944E658853B5F6DA602A /* Pods_Birthtalk_BirthtalkTests.framework */; };
 		340687551E31744500B5B0E2 /* RegisterErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340687541E31744500B5B0E2 /* RegisterErrors.swift */; };
 		340687581E31782D00B5B0E2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340687571E31782D00B5B0E2 /* Result.swift */; };
 		3406875A1E3178BC00B5B0E2 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340687591E3178BC00B5B0E2 /* RequestError.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D5B206E8AA3F6F5D1305212 /* Pods-Birthtalk-BirthtalkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthtalk-BirthtalkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Birthtalk-BirthtalkTests/Pods-Birthtalk-BirthtalkTests.release.xcconfig"; sourceTree = "<group>"; };
 		0FE151884EDA031A2DB74921 /* Pods_Birthtalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Birthtalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		340687541E31744500B5B0E2 /* RegisterErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterErrors.swift; sourceTree = "<group>"; };
 		340687571E31782D00B5B0E2 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -57,6 +59,8 @@
 		34B196301E305B1B009587C8 /* RegisterUserPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RegisterUserPresenter.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		34B196341E305B43009587C8 /* RegisterUserPresenterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RegisterUserPresenterStub.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		406DD59A7D68DB86E4BB166A /* Pods-Birthtalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthtalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Birthtalk/Pods-Birthtalk.debug.xcconfig"; sourceTree = "<group>"; };
+		9666A1836DBBFFA28048E5FF /* Pods-Birthtalk-BirthtalkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthtalk-BirthtalkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Birthtalk-BirthtalkTests/Pods-Birthtalk-BirthtalkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C4CA944E658853B5F6DA602A /* Pods_Birthtalk_BirthtalkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Birthtalk_BirthtalkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF862D433D27032346D8D43 /* Pods-Birthtalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthtalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Birthtalk/Pods-Birthtalk.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CB90662F09BFFB2B4E8F9C /* Pods_Birthtalk_BirthtalkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +244,8 @@
 			children = (
 				406DD59A7D68DB86E4BB166A /* Pods-Birthtalk.debug.xcconfig */,
 				CFF862D433D27032346D8D43 /* Pods-Birthtalk.release.xcconfig */,
+				9666A1836DBBFFA28048E5FF /* Pods-Birthtalk-BirthtalkTests.debug.xcconfig */,
+				0D5B206E8AA3F6F5D1305212 /* Pods-Birthtalk-BirthtalkTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -247,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				0FE151884EDA031A2DB74921 /* Pods_Birthtalk.framework */,
+				C4CA944E658853B5F6DA602A /* Pods_Birthtalk_BirthtalkTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -279,9 +287,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3449A34F1E304A8E005A6755 /* Build configuration list for PBXNativeTarget "BirthtalkTests" */;
 			buildPhases = (
+				B5718834DB5C37F1637330B7 /* [CP] Check Pods Manifest.lock */,
 				3449A33F1E304A8D005A6755 /* Sources */,
 				3449A3401E304A8D005A6755 /* Frameworks */,
 				3449A3411E304A8D005A6755 /* Resources */,
+				8C78C9EEEDE8F3303F9C8339 /* [CP] Embed Pods Frameworks */,
+				48C3CA8EBB0364884A42EDD5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -372,6 +383,51 @@
 			shellScript = "if [ \"$IGNORE_SWIFT_LINT\" == \"\" ]; then\n    if which swiftlint >/dev/null; then\n        swiftlint\n    else\n        echo \"warning: SwiftLint not installed!\"\n    fi\nfi";
 		};
 		4377813572844D5DC5D27340 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		48C3CA8EBB0364884A42EDD5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Birthtalk-BirthtalkTests/Pods-Birthtalk-BirthtalkTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C78C9EEEDE8F3303F9C8339 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Birthtalk-BirthtalkTests/Pods-Birthtalk-BirthtalkTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5718834DB5C37F1637330B7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -593,6 +649,7 @@
 		};
 		3449A3501E304A8E005A6755 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9666A1836DBBFFA28048E5FF /* Pods-Birthtalk-BirthtalkTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -610,6 +667,7 @@
 		};
 		3449A3511E304A8E005A6755 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D5B206E8AA3F6F5D1305212 /* Pods-Birthtalk-BirthtalkTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
