@@ -1,8 +1,6 @@
 import Foundation
 
-typealias RegisterResult = Result<UserEntity, RequestError>
-
 protocol AuthenticationGateway {
     func register(name: String, email: String, password: String, birthdate: Date,
-                  completion: @escaping ((RegisterResult) -> Void))
+                  completion: @escaping ((Result<UserEntity, RequestError>) -> Void))
 }

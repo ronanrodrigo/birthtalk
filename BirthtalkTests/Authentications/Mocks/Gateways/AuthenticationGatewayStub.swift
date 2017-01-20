@@ -4,10 +4,10 @@ import Foundation
 class AuthenticationGatewayStub: AuthenticationGateway {
 
     var registeredUser: UserEntity?
-    var registerResult: RegisterResult?
+    var registerResult: Result<UserEntity, RequestError>?
 
     func register(name: String, email: String, password: String, birthdate: Date,
-                  completion: ((RegisterResult) -> Void)) {
+                  completion: @escaping ((Result<UserEntity, RequestError>) -> Void)) {
         guard let registerResult = registerResult else { return }
 
         switch registerResult {
