@@ -1,4 +1,6 @@
 PODS:
+  - Firebase (3.11.0):
+    - Firebase/Core (= 3.11.0)
   - Firebase/Auth (3.11.0):
     - Firebase/Core
     - FirebaseAuth (= 3.1.0)
@@ -46,6 +48,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.7)
 
 DEPENDENCIES:
+  - Firebase
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -64,6 +67,6 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
 
-PODFILE CHECKSUM: 72f72badeaf89cc6583d172e166991b9256c019c
+PODFILE CHECKSUM: b4560d8e06441ff8acd2e10ddf3a8acedd8dd70f
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0.rc.1

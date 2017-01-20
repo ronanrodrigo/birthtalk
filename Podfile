@@ -6,4 +6,8 @@ target 'Birthtalk' do
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
 
+  target 'BirthtalkTests' do
+    pod 'Firebase'
+  end
+
 end
