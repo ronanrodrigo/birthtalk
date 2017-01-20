@@ -17,9 +17,11 @@
 		3449A33A1E304A8D005A6755 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3449A3391E304A8D005A6755 /* Assets.xcassets */; };
 		3449A33D1E304A8D005A6755 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3449A33B1E304A8D005A6755 /* LaunchScreen.storyboard */; };
 		3449A3581E304D36005A6755 /* RegisterUserUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449A3571E304D36005A6755 /* RegisterUserUsecaseTests.swift */; };
+		3480D3EC1E326DF300EAF9F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3480D3EB1E326DF300EAF9F4 /* GoogleService-Info.plist */; };
 		34B1962E1E305AFE009587C8 /* RegisterUserUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B1962D1E305AFE009587C8 /* RegisterUserUsecase.swift */; };
 		34B196311E305B1B009587C8 /* RegisterUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B196301E305B1B009587C8 /* RegisterUserPresenter.swift */; };
 		34B196351E305B43009587C8 /* RegisterUserPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B196341E305B43009587C8 /* RegisterUserPresenterStub.swift */; };
+		96E2C5D8FFC02FA20ADA4B6C /* Pods_Birthtalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE151884EDA031A2DB74921 /* Pods_Birthtalk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FE151884EDA031A2DB74921 /* Pods_Birthtalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Birthtalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		340687541E31744500B5B0E2 /* RegisterErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterErrors.swift; sourceTree = "<group>"; };
 		340687571E31782D00B5B0E2 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		340687591E3178BC00B5B0E2 /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
@@ -47,9 +50,12 @@
 		3449A3431E304A8D005A6755 /* BirthtalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BirthtalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3449A3491E304A8E005A6755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3449A3571E304D36005A6755 /* RegisterUserUsecaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserUsecaseTests.swift; sourceTree = "<group>"; };
+		3480D3EB1E326DF300EAF9F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		34B1962D1E305AFE009587C8 /* RegisterUserUsecase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RegisterUserUsecase.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		34B196301E305B1B009587C8 /* RegisterUserPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RegisterUserPresenter.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		34B196341E305B43009587C8 /* RegisterUserPresenterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RegisterUserPresenterStub.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		406DD59A7D68DB86E4BB166A /* Pods-Birthtalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthtalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Birthtalk/Pods-Birthtalk.debug.xcconfig"; sourceTree = "<group>"; };
+		CFF862D433D27032346D8D43 /* Pods-Birthtalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthtalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Birthtalk/Pods-Birthtalk.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E2C5D8FFC02FA20ADA4B6C /* Pods_Birthtalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +116,8 @@
 			children = (
 				3449A3311E304A8D005A6755 /* Birthtalk */,
 				3449A3461E304A8E005A6755 /* BirthtalkTests */,
+				953EB7EF19CA936FE409D271 /* Frameworks */,
+				7668D9EF7443F9FCE166D539 /* Pods */,
 				3449A3301E304A8D005A6755 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -146,6 +155,7 @@
 			children = (
 				3449A3321E304A8D005A6755 /* AppDelegate.swift */,
 				3449A3391E304A8D005A6755 /* Assets.xcassets */,
+				3480D3EB1E326DF300EAF9F4 /* GoogleService-Info.plist */,
 				3449A33E1E304A8D005A6755 /* Info.plist */,
 				3449A33B1E304A8D005A6755 /* LaunchScreen.storyboard */,
 			);
@@ -221,6 +231,23 @@
 			path = Presenters;
 			sourceTree = "<group>";
 		};
+		7668D9EF7443F9FCE166D539 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				406DD59A7D68DB86E4BB166A /* Pods-Birthtalk.debug.xcconfig */,
+				CFF862D433D27032346D8D43 /* Pods-Birthtalk.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		953EB7EF19CA936FE409D271 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FE151884EDA031A2DB74921 /* Pods_Birthtalk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -228,10 +255,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3449A34C1E304A8E005A6755 /* Build configuration list for PBXNativeTarget "Birthtalk" */;
 			buildPhases = (
+				4377813572844D5DC5D27340 /* [CP] Check Pods Manifest.lock */,
 				3449A32B1E304A8D005A6755 /* Sources */,
 				3449A32C1E304A8D005A6755 /* Frameworks */,
 				3449A32D1E304A8D005A6755 /* Resources */,
 				34B196291E30522A009587C8 /* Swift Lint */,
+				EE686596A47DA664A46B851D /* [CP] Embed Pods Frameworks */,
+				FA405A1FED03DAB18ABCCB3B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -310,6 +340,7 @@
 			files = (
 				3449A33D1E304A8D005A6755 /* LaunchScreen.storyboard in Resources */,
 				3449A33A1E304A8D005A6755 /* Assets.xcassets in Resources */,
+				3480D3EC1E326DF300EAF9F4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +367,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [ \"$IGNORE_SWIFT_LINT\" == \"\" ]; then\n    if which swiftlint >/dev/null; then\n        swiftlint\n    else\n        echo \"warning: SwiftLint not installed!\"\n    fi\nfi";
+		};
+		4377813572844D5DC5D27340 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EE686596A47DA664A46B851D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Birthtalk/Pods-Birthtalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA405A1FED03DAB18ABCCB3B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Birthtalk/Pods-Birthtalk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -483,6 +559,7 @@
 		};
 		3449A34D1E304A8E005A6755 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 406DD59A7D68DB86E4BB166A /* Pods-Birthtalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -497,6 +574,7 @@
 		};
 		3449A34E1E304A8E005A6755 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFF862D433D27032346D8D43 /* Pods-Birthtalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>649481524087-4p1lg8ve9v6arg2kmhtfcdtbfsd8q2av.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.649481524087-4p1lg8ve9v6arg2kmhtfcdtbfsd8q2av</string>
+	<key>GCM_SENDER_ID</key>
+	<string>649481524087</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>io.github.ronanrodrigo.birthtalk</string>
+	<key>PROJECT_ID</key>
+	<string>birthtalk-e14dd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>birthtalk-e14dd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:649481524087:ios:e2389d6cff943a47</string>
+	<key>DATABASE_URL</key>
+	<string>https://birthtalk-e14dd.firebaseio.com</string>
+</dict>
+</plist>
