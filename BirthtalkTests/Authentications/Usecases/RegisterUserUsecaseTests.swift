@@ -6,10 +6,10 @@ class RegisterUserUsecaseTests: XCTestCase {
     let empty = ""
     let smallPassword = "1234"
     let invalidEmail = "invalid"
-    let validMail = "fake@mail.com"
-    let validPassword = "somepassword"
-    let validName = "Name"
-    let validDate = Date()
+    static let validMail = "fake@mail.com"
+    static let validPassword = "somepassword"
+    static let validName = "Name"
+    static let validDate = Date()
 
     var usecase: RegisterUserUsecase!
     var presenter: RegisterUserPresenterStub!
@@ -22,7 +22,9 @@ class RegisterUserUsecaseTests: XCTestCase {
     }
 
     func testRegisterAnUserWithEmptyEmailDisplayEmailErrorMessage() {
-        usecase.register(name: validName, email: empty, password: validPassword, birthdate: validDate)
+        let user = generateUserEntity(email: empty)
+
+        usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
 
         XCTAssertTrue(presenter.shownInvalidEmailErrorMessage)
         XCTAssertFalse(presenter.shownEmptyNameErrorMessage)
@@ -32,7 +34,9 @@ class RegisterUserUsecaseTests: XCTestCase {
     }
 
     func testRegisterAnUserWithInvalidEmailDisplayEmailErrorMessage() {
-        usecase.register(name: validName, email: invalidEmail, password: validPassword, birthdate: validDate)
+        let user = generateUserEntity(email: invalidEmail)
+
+        usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
 
         XCTAssertTrue(presenter.shownInvalidEmailErrorMessage)
         XCTAssertFalse(presenter.shownEmptyNameErrorMessage)
@@ -42,7 +46,9 @@ class RegisterUserUsecaseTests: XCTestCase {
     }
 
     func testRegisterAnUserWithEmptyNameDisplayNameErrorMessage() {
-        usecase.register(name: empty, email: validMail, password: validPassword, birthdate: validDate)
+        let user = generateUserEntity(name: empty)
+
+        usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
 
         XCTAssertTrue(presenter.shownEmptyNameErrorMessage)
         XCTAssertFalse(presenter.shownInvalidEmailErrorMessage)
@@ -52,7 +58,9 @@ class RegisterUserUsecaseTests: XCTestCase {
     }
 
     func testRegisterAnUserWithEmptyPasswordDisplayPasswordErrorMessage() {
-        usecase.register(name: validName, email: validMail, password: empty, birthdate: validDate)
+        let user = generateUserEntity(password: empty)
+
+        usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
 
         XCTAssertTrue(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertFalse(presenter.shownInvalidEmailErrorMessage)
@@ -62,7 +70,9 @@ class RegisterUserUsecaseTests: XCTestCase {
     }
 
     func testRegisterAnUserWithoutAtLeastFiveCharactersInThePasswordDisplayPasswordErrorMessage() {
-        usecase.register(name: validName, email: validMail, password: smallPassword, birthdate: validDate)
+        let user = generateUserEntity(password: smallPassword)
+
+        usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
 
         XCTAssertTrue(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertFalse(presenter.shownInvalidEmailErrorMessage)
@@ -72,7 +82,9 @@ class RegisterUserUsecaseTests: XCTestCase {
     }
 
     func testRegisterAnUserWithAllEmptyInputDisplayAllErrorMessages() {
-        usecase.register(name: empty, email: empty, password: empty, birthdate: validDate)
+        let user = generateUserEntity(name: empty, email: empty, password: empty)
+
+        usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
 
         XCTAssertTrue(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertTrue(presenter.shownInvalidEmailErrorMessage)
@@ -82,7 +94,9 @@ class RegisterUserUsecaseTests: XCTestCase {
     }
 
     func testRegisterAnUserWithAllInvalidInputDisplayAllErrorMessages() {
-        usecase.register(name: empty, email: invalidEmail, password: smallPassword, birthdate: validDate)
+        let user = generateUserEntity(name: empty, email: empty, password: smallPassword)
+
+        usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
 
         XCTAssertTrue(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertTrue(presenter.shownInvalidEmailErrorMessage)
@@ -119,9 +133,9 @@ class RegisterUserUsecaseTests: XCTestCase {
         XCTAssertFalse(presenter.shownEmptyNameErrorMessage)
     }
 
-    private func generateUserEntity() -> UserEntity {
-        return UserEntity(identifier: nil, name: validName, email: validMail, password: validPassword,
-                          birthdate: validDate)
+    private func generateUserEntity(name: String = validName, email: String = validMail,
+                                    password: String = validPassword, birthdate: Date = validDate) -> UserEntity {
+        return UserEntity(identifier: nil, name: name, email: email, password: password, birthdate: birthdate)
     }
 
 }
