@@ -3,17 +3,17 @@ import XCTest
 
 class RegisterUserUsecaseTests: XCTestCase {
 
-    let empty = ""
-    let smallPassword = "1234"
-    let invalidEmail = "invalid"
-    static let validMail = "fake@mail.com"
-    static let validPassword = "somepassword"
-    static let validName = "Name"
-    static let validDate = Date()
+    private let empty = ""
+    private let smallPassword = "1234"
+    private let invalidEmail = "invalid"
+    private static let validMail = "fake@mail.com"
+    private static let validPassword = "somepassword"
+    private static let validName = "Name"
+    private static let validDate = Date()
 
-    var usecase: RegisterUserUsecase!
-    var presenter: RegisterUserPresenterStub!
-    var gateway: AuthenticationGatewayStub!
+    private var usecase: RegisterUserUsecase!
+    private var presenter: RegisterUserPresenterStub!
+    private var gateway: AuthenticationGatewayStub!
 
     override func setUp() {
         gateway = AuthenticationGatewayStub()
