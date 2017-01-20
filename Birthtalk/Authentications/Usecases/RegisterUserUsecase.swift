@@ -7,8 +7,12 @@ struct RegisterUserUsecase {
 
     func register(name: String, email: String, password: String, birthdate: Date) {
         guard isValidInputs(name: name, email: email, password: password, birthdate: birthdate) else { return }
-        gateway.register(name: name, email: email, password: password, birthdate: birthdate)
-        presenter.success()
+        gateway.register(name: name, email: email, password: password, birthdate: birthdate) { result in
+            switch result {
+            case .success(_): presenter.success()
+            case let .failure(error): presenter.failure(error: error)
+            }
+        }
     }
 
     private func isValidInputs(name: String, email: String, password: String, birthdate: Date) -> Bool {

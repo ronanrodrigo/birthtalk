@@ -94,12 +94,29 @@ class RegisterUserUsecaseTests: XCTestCase {
     func testRegisterAnUserWithValidInputSaveDataAndPresentSuccessMessage() {
         let user = UserEntity(identifier: nil, name: validName, email: validMail, password: validPassword,
                               birthdate: validDate)
+        gateway.registerResult = Result.success(user)
 
         usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
 
         XCTAssertNotNil(gateway.registeredUser)
         XCTAssertEqual(gateway.registeredUser!, user)
         XCTAssertTrue(presenter.shownRegistredUser)
+        XCTAssertFalse(presenter.shownInvalidPasswordErrorMessage)
+        XCTAssertFalse(presenter.shownInvalidEmailErrorMessage)
+        XCTAssertFalse(presenter.shownEmptyNameErrorMessage)
+    }
+
+    func testRegisterAnUserWithGatewayErrorDisplayGatewayErrorMessage() {
+        gateway.registerResult = Result.failure(RequestError.notConnectedToInternet)
+
+        let user = UserEntity(identifier: nil, name: validName, email: validMail, password: validPassword,
+                              birthdate: validDate)
+
+        usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
+
+        XCTAssertTrue(presenter.showInvalidRequestErrorMessage)
+        XCTAssertNil(gateway.registeredUser)
+        XCTAssertFalse(presenter.shownRegistredUser)
         XCTAssertFalse(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertFalse(presenter.shownInvalidEmailErrorMessage)
         XCTAssertFalse(presenter.shownEmptyNameErrorMessage)
