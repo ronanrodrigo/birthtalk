@@ -23,6 +23,13 @@ bundle install
 brew install swiftlint
 ```
 
+### Note
+Temporally it will use Firebase because I am no in Apple Developer Program Membership. But shortly it will be replaced by CloudKit. Now it is necessary to install Firebase
+
+```shell
+pod install
+```
+
 ## Tests
 This application use native tests library XCTest. And it is possible to run that with fastlane command.
 
