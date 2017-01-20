@@ -1,5 +1,5 @@
 <h1>
-<img src="https://raw.githubusercontent.com/ronanrodrigo/birthtalk/master/Birthtalk/Base/AppIcon.png" height=20/>
+<img src="https://raw.githubusercontent.com/ronanrodrigo/birthtalk/master/Birthtalk/Base/AppIcon.png" height=25/>
 Birthtalk
 </h1>
 
