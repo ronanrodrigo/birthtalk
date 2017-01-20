@@ -4,8 +4,8 @@
 
 -------
 <p align="center">
-  <a href="#motivation">Motivation</a>
-  <a href="#installation">Instalation</a>
+  <a href="#motivation">Motivation</a> •
+  <a href="#installation">Instalation</a> •
   <a href="#tests">Tests</a>
 </p>
 -------
