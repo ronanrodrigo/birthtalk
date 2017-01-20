@@ -14,8 +14,7 @@ class AuthenticationGatewayStub: AuthenticationGateway {
         case .failure(_):
             registeredUser = nil
         case .success(_):
-            registeredUser = UserEntity(identifier: nil, name: name, email: email, password: password,
-                                        birthdate: birthdate)
+            registeredUser = UserEntity(identifier: nil, name: name, email: email, birthdate: birthdate)
         }
 
         completion(registerResult)

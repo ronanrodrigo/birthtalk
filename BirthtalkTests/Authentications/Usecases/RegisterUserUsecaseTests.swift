@@ -6,8 +6,8 @@ class RegisterUserUsecaseTests: XCTestCase {
     private let empty = ""
     private let smallPassword = "1234"
     private let invalidEmail = "invalid"
+    private let validPassword = "somepassword"
     private static let validMail = "fake@mail.com"
-    private static let validPassword = "somepassword"
     private static let validName = "Name"
     private static let validDate = Date()
 
@@ -24,7 +24,7 @@ class RegisterUserUsecaseTests: XCTestCase {
     func testRegisterAnUserWithEmptyEmailDisplayEmailErrorMessage() {
         let user = generateUserEntity(email: empty)
 
-        usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
+        usecase.register(name: user.name, email: user.email, password: validPassword, birthdate: user.birthdate)
 
         XCTAssertTrue(presenter.shownInvalidEmailErrorMessage)
         XCTAssertFalse(presenter.shownEmptyNameErrorMessage)
@@ -36,7 +36,7 @@ class RegisterUserUsecaseTests: XCTestCase {
     func testRegisterAnUserWithInvalidEmailDisplayEmailErrorMessage() {
         let user = generateUserEntity(email: invalidEmail)
 
-        usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
+        usecase.register(name: user.name, email: user.email, password: validPassword, birthdate: user.birthdate)
 
         XCTAssertTrue(presenter.shownInvalidEmailErrorMessage)
         XCTAssertFalse(presenter.shownEmptyNameErrorMessage)
@@ -48,7 +48,7 @@ class RegisterUserUsecaseTests: XCTestCase {
     func testRegisterAnUserWithEmptyNameDisplayNameErrorMessage() {
         let user = generateUserEntity(name: empty)
 
-        usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
+        usecase.register(name: user.name, email: user.email, password: validPassword, birthdate: user.birthdate)
 
         XCTAssertTrue(presenter.shownEmptyNameErrorMessage)
         XCTAssertFalse(presenter.shownInvalidEmailErrorMessage)
@@ -58,9 +58,9 @@ class RegisterUserUsecaseTests: XCTestCase {
     }
 
     func testRegisterAnUserWithEmptyPasswordDisplayPasswordErrorMessage() {
-        let user = generateUserEntity(password: empty)
+        let user = generateUserEntity()
 
-        usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
+        usecase.register(name: user.name, email: user.email, password: empty, birthdate: user.birthdate)
 
         XCTAssertTrue(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertFalse(presenter.shownInvalidEmailErrorMessage)
@@ -70,9 +70,9 @@ class RegisterUserUsecaseTests: XCTestCase {
     }
 
     func testRegisterAnUserWithoutAtLeastFiveCharactersInThePasswordDisplayPasswordErrorMessage() {
-        let user = generateUserEntity(password: smallPassword)
+        let user = generateUserEntity()
 
-        usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
+        usecase.register(name: user.name, email: user.email, password: smallPassword, birthdate: user.birthdate)
 
         XCTAssertTrue(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertFalse(presenter.shownInvalidEmailErrorMessage)
@@ -82,9 +82,9 @@ class RegisterUserUsecaseTests: XCTestCase {
     }
 
     func testRegisterAnUserWithAllEmptyInputDisplayAllErrorMessages() {
-        let user = generateUserEntity(name: empty, email: empty, password: empty)
+        let user = generateUserEntity(name: empty, email: empty)
 
-        usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
+        usecase.register(name: user.name, email: user.email, password: empty, birthdate: user.birthdate)
 
         XCTAssertTrue(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertTrue(presenter.shownInvalidEmailErrorMessage)
@@ -94,9 +94,9 @@ class RegisterUserUsecaseTests: XCTestCase {
     }
 
     func testRegisterAnUserWithAllInvalidInputDisplayAllErrorMessages() {
-        let user = generateUserEntity(name: empty, email: empty, password: smallPassword)
+        let user = generateUserEntity(name: empty, email: empty)
 
-        usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
+        usecase.register(name: user.name, email: user.email, password: smallPassword, birthdate: user.birthdate)
 
         XCTAssertTrue(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertTrue(presenter.shownInvalidEmailErrorMessage)
@@ -109,7 +109,7 @@ class RegisterUserUsecaseTests: XCTestCase {
         let user = generateUserEntity()
         gateway.registerResult = Result.success(user)
 
-        usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
+        usecase.register(name: user.name, email: user.email, password: validPassword, birthdate: user.birthdate)
 
         XCTAssertNotNil(gateway.registeredUser)
         XCTAssertEqual(gateway.registeredUser!, user)
@@ -123,7 +123,7 @@ class RegisterUserUsecaseTests: XCTestCase {
         gateway.registerResult = Result.failure(RequestError.notConnectedToInternet)
         let user = generateUserEntity()
 
-        usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
+        usecase.register(name: user.name, email: user.email, password: validPassword, birthdate: user.birthdate)
 
         XCTAssertTrue(presenter.showInvalidRequestErrorMessage)
         XCTAssertNil(gateway.registeredUser)
@@ -134,8 +134,8 @@ class RegisterUserUsecaseTests: XCTestCase {
     }
 
     private func generateUserEntity(name: String = validName, email: String = validMail,
-                                    password: String = validPassword, birthdate: Date = validDate) -> UserEntity {
-        return UserEntity(identifier: nil, name: name, email: email, password: password, birthdate: birthdate)
+                                    birthdate: Date = validDate) -> UserEntity {
+        return UserEntity(identifier: nil, name: name, email: email, birthdate: birthdate)
     }
 
 }

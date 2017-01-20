@@ -4,7 +4,6 @@ protocol User: Equatable {
     var identifier: String? { get }
     var name: String { get }
     var email: String { get }
-    var password: String { get }
     var birthdate: Date { get }
 }
 
@@ -12,7 +11,6 @@ struct UserEntity: User {
     let identifier: String?
     let name: String
     let email: String
-    let password: String
     let birthdate: Date
 }
 
