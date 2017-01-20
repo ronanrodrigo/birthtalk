@@ -92,8 +92,7 @@ class RegisterUserUsecaseTests: XCTestCase {
     }
 
     func testRegisterAnUserWithValidInputSaveDataAndPresentSuccessMessage() {
-        let user = UserEntity(identifier: nil, name: validName, email: validMail, password: validPassword,
-                              birthdate: validDate)
+        let user = generateUserEntity()
         gateway.registerResult = Result.success(user)
 
         usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
@@ -108,9 +107,7 @@ class RegisterUserUsecaseTests: XCTestCase {
 
     func testRegisterAnUserWithGatewayErrorDisplayGatewayErrorMessage() {
         gateway.registerResult = Result.failure(RequestError.notConnectedToInternet)
-
-        let user = UserEntity(identifier: nil, name: validName, email: validMail, password: validPassword,
-                              birthdate: validDate)
+        let user = generateUserEntity()
 
         usecase.register(name: user.name, email: user.email, password: user.password, birthdate: user.birthdate)
 
@@ -120,6 +117,11 @@ class RegisterUserUsecaseTests: XCTestCase {
         XCTAssertFalse(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertFalse(presenter.shownInvalidEmailErrorMessage)
         XCTAssertFalse(presenter.shownEmptyNameErrorMessage)
+    }
+
+    private func generateUserEntity() -> UserEntity {
+        return UserEntity(identifier: nil, name: validName, email: validMail, password: validPassword,
+                          birthdate: validDate)
     }
 
 }
