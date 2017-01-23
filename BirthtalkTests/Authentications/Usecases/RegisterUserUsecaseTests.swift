@@ -120,7 +120,7 @@ class RegisterUserUsecaseTests: XCTestCase {
     }
 
     func testRegisterAnUserWithGatewayErrorDisplayGatewayErrorMessage() {
-        gateway.registerResult = Result.failure(RequestError.notConnectedToInternet)
+        gateway.registerResult = Result.failure(AuthenticationError.networkError)
         let user = generateUserEntity()
 
         usecase.register(name: user.name, email: user.email, password: validPassword, birthdate: user.birthdate)

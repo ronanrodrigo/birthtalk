@@ -10,17 +10,15 @@ struct RegisterUserUsecase {
         gateway.register(name: name, email: email, password: password, birthdate: birthdate, completion: presentResult)
     }
 
-    private func presentResult(result: Result<UserEntity, RequestError>) {
+    private func presentResult(result: Result<UserEntity, AuthenticationError>) {
         switch result {
-        case .success:
-            self.presenter.success()
-        case let .failure(error):
-            self.presenter.failure(error: error)
+        case .success: self.presenter.success()
+        case let .failure(error): self.presenter.failure(error: error)
         }
     }
 
     private func isValidInputs(name: String, email: String, password: String, birthdate: Date) -> Bool {
-        var errors = [RegisterError]()
+        var errors = [AuthenticationError]()
         if name.isEmpty { errors.append(.invalidName) }
         if password.characters.count < 5 { errors.append(.invalidPassword) }
         if email.isEmpty { errors.append(.invalidEmail) }
