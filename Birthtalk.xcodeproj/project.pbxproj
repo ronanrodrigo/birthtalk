@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		340687551E31744500B5B0E2 /* RegisterErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340687541E31744500B5B0E2 /* RegisterErrors.swift */; };
+		01CB90662F09BFFB2B4E8F9C /* Pods_Birthtalk_BirthtalkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4CA944E658853B5F6DA602A /* Pods_Birthtalk_BirthtalkTests.framework */; };
+		340687551E31744500B5B0E2 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340687541E31744500B5B0E2 /* AuthenticationError.swift */; };
 		340687581E31782D00B5B0E2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340687571E31782D00B5B0E2 /* Result.swift */; };
-		3406875A1E3178BC00B5B0E2 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340687591E3178BC00B5B0E2 /* RequestError.swift */; };
 		341B09271E310EA6009DFC9A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B09261E310EA6009DFC9A /* User.swift */; };
 		341B092E1E311214009DFC9A /* AuthenticationGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B092D1E311214009DFC9A /* AuthenticationGateway.swift */; };
 		341B09311E3113E3009DFC9A /* AuthenticationGatewayStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B09301E3113E3009DFC9A /* AuthenticationGatewayStub.swift */; };
+		344551DC1E32B942003E35AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 344551DB1E32B942003E35AE /* GoogleService-Info.plist */; };
 		3449A3331E304A8D005A6755 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449A3321E304A8D005A6755 /* AppDelegate.swift */; };
 		3449A33A1E304A8D005A6755 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3449A3391E304A8D005A6755 /* Assets.xcassets */; };
 		3449A33D1E304A8D005A6755 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3449A33B1E304A8D005A6755 /* LaunchScreen.storyboard */; };
 		3449A3581E304D36005A6755 /* RegisterUserUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449A3571E304D36005A6755 /* RegisterUserUsecaseTests.swift */; };
-		3480D3EC1E326DF300EAF9F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3480D3EB1E326DF300EAF9F4 /* GoogleService-Info.plist */; };
 		3480D3F21E328D1C00EAF9F4 /* AuthenticationGatewayFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480D3F11E328D1C00EAF9F4 /* AuthenticationGatewayFirebase.swift */; };
+		349CB9891E361B3F00BC5751 /* AuthenticationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CB9881E361B3F00BC5751 /* AuthenticationErrorTests.swift */; };
 		34B1962E1E305AFE009587C8 /* RegisterUserUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B1962D1E305AFE009587C8 /* RegisterUserUsecase.swift */; };
 		34B196311E305B1B009587C8 /* RegisterUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B196301E305B1B009587C8 /* RegisterUserPresenter.swift */; };
 		34B196351E305B43009587C8 /* RegisterUserPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B196341E305B43009587C8 /* RegisterUserPresenterStub.swift */; };
@@ -36,13 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D5B206E8AA3F6F5D1305212 /* Pods-Birthtalk-BirthtalkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthtalk-BirthtalkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Birthtalk-BirthtalkTests/Pods-Birthtalk-BirthtalkTests.release.xcconfig"; sourceTree = "<group>"; };
 		0FE151884EDA031A2DB74921 /* Pods_Birthtalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Birthtalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		340687541E31744500B5B0E2 /* RegisterErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterErrors.swift; sourceTree = "<group>"; };
+		340687541E31744500B5B0E2 /* AuthenticationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
 		340687571E31782D00B5B0E2 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		340687591E3178BC00B5B0E2 /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		341B09261E310EA6009DFC9A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		341B092D1E311214009DFC9A /* AuthenticationGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationGateway.swift; sourceTree = "<group>"; };
 		341B09301E3113E3009DFC9A /* AuthenticationGatewayStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationGatewayStub.swift; sourceTree = "<group>"; };
+		344551DB1E32B942003E35AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3449A32F1E304A8D005A6755 /* Birthtalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birthtalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3449A3321E304A8D005A6755 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3449A3391E304A8D005A6755 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,12 +53,14 @@
 		3449A3431E304A8D005A6755 /* BirthtalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BirthtalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3449A3491E304A8E005A6755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3449A3571E304D36005A6755 /* RegisterUserUsecaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserUsecaseTests.swift; sourceTree = "<group>"; };
-		3480D3EB1E326DF300EAF9F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3480D3F11E328D1C00EAF9F4 /* AuthenticationGatewayFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationGatewayFirebase.swift; sourceTree = "<group>"; };
+		349CB9881E361B3F00BC5751 /* AuthenticationErrorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorTests.swift; sourceTree = "<group>"; };
 		34B1962D1E305AFE009587C8 /* RegisterUserUsecase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RegisterUserUsecase.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		34B196301E305B1B009587C8 /* RegisterUserPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RegisterUserPresenter.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		34B196341E305B43009587C8 /* RegisterUserPresenterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RegisterUserPresenterStub.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		406DD59A7D68DB86E4BB166A /* Pods-Birthtalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthtalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Birthtalk/Pods-Birthtalk.debug.xcconfig"; sourceTree = "<group>"; };
+		9666A1836DBBFFA28048E5FF /* Pods-Birthtalk-BirthtalkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthtalk-BirthtalkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Birthtalk-BirthtalkTests/Pods-Birthtalk-BirthtalkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C4CA944E658853B5F6DA602A /* Pods_Birthtalk_BirthtalkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Birthtalk_BirthtalkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF862D433D27032346D8D43 /* Pods-Birthtalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthtalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Birthtalk/Pods-Birthtalk.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CB90662F09BFFB2B4E8F9C /* Pods_Birthtalk_BirthtalkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +87,6 @@
 		340687561E31782000B5B0E2 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				340687591E3178BC00B5B0E2 /* RequestError.swift */,
 				340687571E31782D00B5B0E2 /* Result.swift */,
 			);
 			path = Commons;
@@ -91,7 +95,7 @@
 		341B09251E310E97009DFC9A /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				340687541E31744500B5B0E2 /* RegisterErrors.swift */,
+				340687541E31744500B5B0E2 /* AuthenticationError.swift */,
 				341B09261E310EA6009DFC9A /* User.swift */,
 			);
 			path = Entities;
@@ -158,7 +162,7 @@
 			children = (
 				3449A3321E304A8D005A6755 /* AppDelegate.swift */,
 				3449A3391E304A8D005A6755 /* Assets.xcassets */,
-				3480D3EB1E326DF300EAF9F4 /* GoogleService-Info.plist */,
+				344551DB1E32B942003E35AE /* GoogleService-Info.plist */,
 				3449A33E1E304A8D005A6755 /* Info.plist */,
 				3449A33B1E304A8D005A6755 /* LaunchScreen.storyboard */,
 			);
@@ -176,6 +180,7 @@
 		3449A3551E304CED005A6755 /* Authentications */ = {
 			isa = PBXGroup;
 			children = (
+				349CB9871E361B2E00BC5751 /* Entities */,
 				34B196321E305B32009587C8 /* Mocks */,
 				3449A3561E304D00005A6755 /* Usecases */,
 			);
@@ -188,6 +193,15 @@
 				3449A3571E304D36005A6755 /* RegisterUserUsecaseTests.swift */,
 			);
 			path = Usecases;
+			sourceTree = "<group>";
+		};
+		349CB9871E361B2E00BC5751 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				349CB9881E361B3F00BC5751 /* AuthenticationErrorTests.swift */,
+			);
+			name = Entities;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		34B1962B1E305AEB009587C8 /* Authentications */ = {
@@ -239,6 +253,8 @@
 			children = (
 				406DD59A7D68DB86E4BB166A /* Pods-Birthtalk.debug.xcconfig */,
 				CFF862D433D27032346D8D43 /* Pods-Birthtalk.release.xcconfig */,
+				9666A1836DBBFFA28048E5FF /* Pods-Birthtalk-BirthtalkTests.debug.xcconfig */,
+				0D5B206E8AA3F6F5D1305212 /* Pods-Birthtalk-BirthtalkTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -247,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				0FE151884EDA031A2DB74921 /* Pods_Birthtalk.framework */,
+				C4CA944E658853B5F6DA602A /* Pods_Birthtalk_BirthtalkTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -279,9 +296,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3449A34F1E304A8E005A6755 /* Build configuration list for PBXNativeTarget "BirthtalkTests" */;
 			buildPhases = (
+				B5718834DB5C37F1637330B7 /* [CP] Check Pods Manifest.lock */,
 				3449A33F1E304A8D005A6755 /* Sources */,
 				3449A3401E304A8D005A6755 /* Frameworks */,
 				3449A3411E304A8D005A6755 /* Resources */,
+				8C78C9EEEDE8F3303F9C8339 /* [CP] Embed Pods Frameworks */,
+				48C3CA8EBB0364884A42EDD5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -343,7 +363,7 @@
 			files = (
 				3449A33D1E304A8D005A6755 /* LaunchScreen.storyboard in Resources */,
 				3449A33A1E304A8D005A6755 /* Assets.xcassets in Resources */,
-				3480D3EC1E326DF300EAF9F4 /* GoogleService-Info.plist in Resources */,
+				344551DC1E32B942003E35AE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +392,51 @@
 			shellScript = "if [ \"$IGNORE_SWIFT_LINT\" == \"\" ]; then\n    if which swiftlint >/dev/null; then\n        swiftlint\n    else\n        echo \"warning: SwiftLint not installed!\"\n    fi\nfi";
 		};
 		4377813572844D5DC5D27340 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		48C3CA8EBB0364884A42EDD5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Birthtalk-BirthtalkTests/Pods-Birthtalk-BirthtalkTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C78C9EEEDE8F3303F9C8339 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Birthtalk-BirthtalkTests/Pods-Birthtalk-BirthtalkTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5718834DB5C37F1637330B7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -423,9 +488,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3406875A1E3178BC00B5B0E2 /* RequestError.swift in Sources */,
 				3449A3331E304A8D005A6755 /* AppDelegate.swift in Sources */,
-				340687551E31744500B5B0E2 /* RegisterErrors.swift in Sources */,
+				340687551E31744500B5B0E2 /* AuthenticationError.swift in Sources */,
 				3480D3F21E328D1C00EAF9F4 /* AuthenticationGatewayFirebase.swift in Sources */,
 				341B09271E310EA6009DFC9A /* User.swift in Sources */,
 				34B196311E305B1B009587C8 /* RegisterUserPresenter.swift in Sources */,
@@ -441,6 +505,7 @@
 			files = (
 				34B196351E305B43009587C8 /* RegisterUserPresenterStub.swift in Sources */,
 				3449A3581E304D36005A6755 /* RegisterUserUsecaseTests.swift in Sources */,
+				349CB9891E361B3F00BC5751 /* AuthenticationErrorTests.swift in Sources */,
 				341B09311E3113E3009DFC9A /* AuthenticationGatewayStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,6 +658,7 @@
 		};
 		3449A3501E304A8E005A6755 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9666A1836DBBFFA28048E5FF /* Pods-Birthtalk-BirthtalkTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -610,6 +676,7 @@
 		};
 		3449A3511E304A8E005A6755 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D5B206E8AA3F6F5D1305212 /* Pods-Birthtalk-BirthtalkTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

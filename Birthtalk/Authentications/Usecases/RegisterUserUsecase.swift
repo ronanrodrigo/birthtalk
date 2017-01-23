@@ -7,18 +7,18 @@ struct RegisterUserUsecase {
 
     func register(name: String, email: String, password: String, birthdate: Date) {
         guard isValidInputs(name: name, email: email, password: password, birthdate: birthdate) else { return }
-        gateway.register(name: name, email: email, password: password, birthdate: birthdate) { result in
-            switch result {
-            case .success:
-                presenter.success()
-            case let .failure(error):
-                presenter.failure(error: error)
-            }
+        gateway.register(name: name, email: email, password: password, birthdate: birthdate, completion: presentResult)
+    }
+
+    private func presentResult(result: Result<UserEntity, AuthenticationError>) {
+        switch result {
+        case .success: self.presenter.success()
+        case let .failure(error): self.presenter.failure(error: error)
         }
     }
 
     private func isValidInputs(name: String, email: String, password: String, birthdate: Date) -> Bool {
-        var errors = [RegisterError]()
+        var errors = [AuthenticationError]()
         if name.isEmpty { errors.append(.invalidName) }
         if password.characters.count < 5 { errors.append(.invalidPassword) }
         if email.isEmpty { errors.append(.invalidEmail) }
