@@ -1,3 +1,7 @@
+<h1>
+<img src="https://raw.githubusercontent.com/ronanrodrigo/birthtalk/master/Birthtalk/Base/AppIcon.png" height=25/>
+Birthtalk
+</h1>
 [![Build Status](https://travis-ci.org/ronanrodrigo/birthtalk.svg?branch=master)](https://travis-ci.org/ronanrodrigo/birthtalk) [![Codecov](https://codecov.io/github/ronanrodrigo/birthtalk/coverage.svg?precision=2)](https://codecov.io/gh/ronanrodrigo/birthtalk)
 
 -------
@@ -7,11 +11,6 @@
   <a href="#tests">Tests</a>
 </p>
 -------
-
-<h1>
-<img src="https://raw.githubusercontent.com/ronanrodrigo/birthtalk/master/Birthtalk/Base/AppIcon.png" height=25/>
-Birthtalk
-</h1>
 
 ## Motivation
 In a world where delivery is almost more important than the good code, I decided to create my product based on in a craft work. Following best practices in Software Development and using the least possible third party libraries. This project will be documented in a series of blog posts and the main topics will be TDD, Clean Architecture, SOLID principles and views construct by Code.
