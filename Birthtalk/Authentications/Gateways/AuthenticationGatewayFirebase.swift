@@ -12,7 +12,7 @@ struct  AuthenticationGatewayFirebase: AuthenticationGateway {
 
     func register(name: String, email: String, password: String, birthdate: Date,
                   completion: @escaping ((Result<UserEntity, AuthenticationError>) -> Void)) {
-        firAuth.createUser(withEmail: email, password: password, completion: { user, error in
+        firAuth.createUser(withEmail: email, password: password) { user, error in
             typealias RegisterResult = Result<UserEntity, AuthenticationError>
 
             if let authError = error {
@@ -31,7 +31,7 @@ struct  AuthenticationGatewayFirebase: AuthenticationGateway {
                     completion(result)
                 }
             }
-        })
+        }
     }
 
     private func generateDictionary(name: String, email: String, birthdate: Date) -> [String: Any] {
