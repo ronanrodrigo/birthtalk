@@ -19,6 +19,7 @@
 		3449A33D1E304A8D005A6755 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3449A33B1E304A8D005A6755 /* LaunchScreen.storyboard */; };
 		3449A3581E304D36005A6755 /* RegisterUserUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449A3571E304D36005A6755 /* RegisterUserUsecaseTests.swift */; };
 		3480D3F21E328D1C00EAF9F4 /* AuthenticationGatewayFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480D3F11E328D1C00EAF9F4 /* AuthenticationGatewayFirebase.swift */; };
+		349CB9891E361B3F00BC5751 /* AuthenticationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CB9881E361B3F00BC5751 /* AuthenticationErrorTests.swift */; };
 		34B1962E1E305AFE009587C8 /* RegisterUserUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B1962D1E305AFE009587C8 /* RegisterUserUsecase.swift */; };
 		34B196311E305B1B009587C8 /* RegisterUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B196301E305B1B009587C8 /* RegisterUserPresenter.swift */; };
 		34B196351E305B43009587C8 /* RegisterUserPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B196341E305B43009587C8 /* RegisterUserPresenterStub.swift */; };
@@ -53,6 +54,7 @@
 		3449A3491E304A8E005A6755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3449A3571E304D36005A6755 /* RegisterUserUsecaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserUsecaseTests.swift; sourceTree = "<group>"; };
 		3480D3F11E328D1C00EAF9F4 /* AuthenticationGatewayFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationGatewayFirebase.swift; sourceTree = "<group>"; };
+		349CB9881E361B3F00BC5751 /* AuthenticationErrorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorTests.swift; sourceTree = "<group>"; };
 		34B1962D1E305AFE009587C8 /* RegisterUserUsecase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RegisterUserUsecase.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		34B196301E305B1B009587C8 /* RegisterUserPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RegisterUserPresenter.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		34B196341E305B43009587C8 /* RegisterUserPresenterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RegisterUserPresenterStub.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -178,6 +180,7 @@
 		3449A3551E304CED005A6755 /* Authentications */ = {
 			isa = PBXGroup;
 			children = (
+				349CB9871E361B2E00BC5751 /* Entities */,
 				34B196321E305B32009587C8 /* Mocks */,
 				3449A3561E304D00005A6755 /* Usecases */,
 			);
@@ -190,6 +193,15 @@
 				3449A3571E304D36005A6755 /* RegisterUserUsecaseTests.swift */,
 			);
 			path = Usecases;
+			sourceTree = "<group>";
+		};
+		349CB9871E361B2E00BC5751 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				349CB9881E361B3F00BC5751 /* AuthenticationErrorTests.swift */,
+			);
+			name = Entities;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		34B1962B1E305AEB009587C8 /* Authentications */ = {
@@ -493,6 +505,7 @@
 			files = (
 				34B196351E305B43009587C8 /* RegisterUserPresenterStub.swift in Sources */,
 				3449A3581E304D36005A6755 /* RegisterUserUsecaseTests.swift in Sources */,
+				349CB9891E361B3F00BC5751 /* AuthenticationErrorTests.swift in Sources */,
 				341B09311E3113E3009DFC9A /* AuthenticationGatewayStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

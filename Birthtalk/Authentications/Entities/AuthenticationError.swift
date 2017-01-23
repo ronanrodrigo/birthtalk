@@ -11,18 +11,18 @@ enum AuthenticationError: Error {
     case credentialAlreadyInUse
     case unknown
 
-    static func requestError(of raw: Int) -> AuthenticationError {
-        switch raw {
-        case 17005: return .userDisabled
-        case 17007: return .emailAlreadyInUse
-        case 17008: return .invalidEmail
-        case 17009: return .wrongPassword
-        case 17011: return .userNotFound
-        case 17012: return .accountExistsWithDifferentCredential
-        case 17020: return .networkError
-        case 17025: return .credentialAlreadyInUse
-        case 17026: return .invalidPassword
-        default: return .unknown
+    init(rawValue: Int) {
+        switch rawValue {
+        case 17005: self = .userDisabled
+        case 17007: self = .emailAlreadyInUse
+        case 17008: self = .invalidEmail
+        case 17009: self = .wrongPassword
+        case 17011: self = .userNotFound
+        case 17012: self = .accountExistsWithDifferentCredential
+        case 17020: self = .networkError
+        case 17025: self = .credentialAlreadyInUse
+        case 17026: self = .invalidPassword
+        default: self = .unknown
         }
     }
 }
