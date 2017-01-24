@@ -1,7 +1,10 @@
 language: objective-c
 osx_image: xcode8.2
 cache:
-    - bundler
+  - bundler
+  - cocoapods
+before_install:
+  - pod repo update --silent
 script:
   - bundle exec fastlane test
   - bundle exec danger
