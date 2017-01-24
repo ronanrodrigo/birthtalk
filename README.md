@@ -2,7 +2,7 @@
 <img src="https://raw.githubusercontent.com/ronanrodrigo/birthtalk/master/Birthtalk/Base/AppIcon.png" height=25/>
 Birthtalk
 </h1>
-[![Build Status](https://travis-ci.org/ronanrodrigo/birthtalk.svg?branch=master)](https://travis-ci.org/ronanrodrigo/birthtalk) [![Codecov](https://codecov.io/github/ronanrodrigo/birthtalk/coverage.svg?precision=2)](https://codecov.io/gh/ronanrodrigo/birthtalk)
+[![Build Status](https://travis-ci.org/ronanrodrigo/birthtalk.svg?branch=master)](https://travis-ci.org/ronanrodrigo/birthtalk) [![Codecov](https://codecov.io/github/ronanrodrigo/birthtalk/coverage.svg?precision=2)](https://codecov.io/gh/ronanrodrigo/birthtalk) [![Code Climate](https://codeclimate.com/github/ronanrodrigo/birthtalk/badges/gpa.svg)](https://codeclimate.com/github/ronanrodrigo/birthtalk)
 
 -------
 <p align="center">
