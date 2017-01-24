@@ -1,6 +1,7 @@
 import XCTest
-import FirebaseAuth
 import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 @testable import Birthtalk
 
 private var isFireAppConfigurated = false
@@ -27,6 +28,11 @@ class AuthenticationGatewayFirebaseTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
         guard let firAuth = firAuth, let firAuthCurrentUser = firAuth.currentUser else { return }
+
+        let reference = FIRDatabase.database().reference(fromURL: "http://birthtalk-e14dd.firebaseio.com")
+        let userReference = reference.child("users").child(firAuthCurrentUser.uid)
+        userReference.removeValue()
+
         firAuthCurrentUser.delete { error in
             guard let error = error else { return }
             fatalError(error.localizedDescription)
