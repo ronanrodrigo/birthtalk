@@ -184,7 +184,7 @@
 			children = (
 				349CB9871E361B2E00BC5751 /* Entities */,
 				349CB98A1E361EFC00BC5751 /* Gateways */,
-				34B196321E305B32009587C8 /* Mocks */,
+				34B196321E305B32009587C8 /* TestDoubles */,
 				3449A3561E304D00005A6755 /* Usecases */,
 			);
 			path = Authentications;
@@ -211,7 +211,6 @@
 			children = (
 				349CB98B1E361F0900BC5751 /* AuthenticationGatewayFirebaseTests.swift */,
 			);
-			name = Gateways;
 			path = Gateways;
 			sourceTree = "<group>";
 		};
@@ -242,13 +241,14 @@
 			path = Presenters;
 			sourceTree = "<group>";
 		};
-		34B196321E305B32009587C8 /* Mocks */ = {
+		34B196321E305B32009587C8 /* TestDoubles */ = {
 			isa = PBXGroup;
 			children = (
 				341B092F1E3113D4009DFC9A /* Gateways */,
 				34B196331E305B37009587C8 /* Presenters */,
 			);
-			path = Mocks;
+			name = TestDoubles;
+			path = TestDoubles;
 			sourceTree = "<group>";
 		};
 		34B196331E305B37009587C8 /* Presenters */ = {
