@@ -182,9 +182,9 @@
 		3449A3551E304CED005A6755 /* Authentications */ = {
 			isa = PBXGroup;
 			children = (
+				34B196321E305B32009587C8 /* Doubles */,
 				349CB9871E361B2E00BC5751 /* Entities */,
 				349CB98A1E361EFC00BC5751 /* Gateways */,
-				34B196321E305B32009587C8 /* TestDoubles */,
 				3449A3561E304D00005A6755 /* Usecases */,
 			);
 			path = Authentications;
@@ -241,14 +241,14 @@
 			path = Presenters;
 			sourceTree = "<group>";
 		};
-		34B196321E305B32009587C8 /* TestDoubles */ = {
+		34B196321E305B32009587C8 /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
 				341B092F1E3113D4009DFC9A /* Gateways */,
 				34B196331E305B37009587C8 /* Presenters */,
 			);
-			name = TestDoubles;
-			path = TestDoubles;
+			name = Doubles;
+			path = Doubles;
 			sourceTree = "<group>";
 		};
 		34B196331E305B37009587C8 /* Presenters */ = {
