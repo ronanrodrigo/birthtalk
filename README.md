@@ -17,6 +17,9 @@ In a world where delivery is almost more important than the good code, I decided
 
 This Application will automatically create chat groups where people talk with others that have common things based on their births. It will be possible to meet who born at same day/month/year, or same day/month, or same day/month/year/city, or same zodiac sign and among other combinations.
 
+## Posts
+- [First post: Authentication rules in a handcrafted iOS application with TDD](https://medium.com/cocoaacademymag/authentication-rules-in-a-handcrafted-ios-application-with-tdd-8db5396ebac6#.7kq4cc2x5)
+
 ## Installation
 This application does not have directly dependencies and libraries. But at development environment I use some tools like **[Fastlane](http://fastlane.tools)**, **[Danger](http://danger.systems)**, **[Danger Slather](https://github.com/SlatherOrg/slather)** and **[Swift Lint](https://github.com/realm/SwiftLint)**. The first three tools are  installed with ruby bundler gem and the Swift Lint is installed with brew.
 
