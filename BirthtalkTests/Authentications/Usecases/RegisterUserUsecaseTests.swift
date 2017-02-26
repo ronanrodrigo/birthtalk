@@ -112,7 +112,8 @@ class RegisterUserUsecaseTests: XCTestCase {
         usecase.register(name: user.name, email: user.email, password: validPassword, birthdate: user.birthdate)
 
         XCTAssertNotNil(gateway.registeredUser)
-        XCTAssertEqual(gateway.registeredUser!, user)
+        XCTAssertEqual(gateway.registeredUser!.email, user.email)
+        XCTAssertEqual(gateway.registeredUser!.identifier, user.identifier)
         XCTAssertTrue(presenter.shownRegistredUser)
         XCTAssertFalse(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertFalse(presenter.shownInvalidEmailErrorMessage)

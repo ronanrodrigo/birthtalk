@@ -1,6 +1,6 @@
 import Foundation
 
-protocol User: Equatable {
+protocol User {
     var identifier: String? { get }
     var name: String { get }
     var email: String { get }
@@ -12,11 +12,4 @@ struct UserEntity: User {
     let name: String
     let email: String
     let birthdate: Date
-}
-
-extension UserEntity: Equatable {
-    static func == (lhs: UserEntity, rhs: UserEntity) -> Bool {
-        return lhs.identifier == rhs.identifier &&
-            lhs.email == rhs.email
-    }
 }
