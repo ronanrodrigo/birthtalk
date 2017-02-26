@@ -4,6 +4,7 @@ import FirebaseDatabase
 
 struct  AuthenticationGatewayFirebase: AuthenticationGateway {
 
+    typealias RegisterResult = Result<UserEntity, AuthenticationError>
     private let firAuth: FIRAuth
 
     init(firAuth: FIRAuth) {
@@ -13,8 +14,6 @@ struct  AuthenticationGatewayFirebase: AuthenticationGateway {
     func register(name: String, email: String, password: String, birthdate: Date,
                   completion: @escaping ((Result<UserEntity, AuthenticationError>) -> Void)) {
         firAuth.createUser(withEmail: email, password: password) { user, error in
-            typealias RegisterResult = Result<UserEntity, AuthenticationError>
-
             if let authError = error {
                 let result = RegisterResult.failure(AuthenticationError(rawValue: authError._code))
                 completion(result)
@@ -22,15 +21,21 @@ struct  AuthenticationGatewayFirebase: AuthenticationGateway {
             }
 
             if let user = user {
-                let reference = FIRDatabase.database().reference(fromURL: "http://birthtalk-e14dd.firebaseio.com")
-                let userReference = reference.child("users").child(user.uid)
-                let userDictionary = self.generateDictionary(name: name, email: email, birthdate: birthdate)
-                userReference.updateChildValues(userDictionary) { _, _ in
-                    let result = RegisterResult.success(self.generateUserEntity(identifier: user.uid, name: name,
-                                                                                email: email, birthdate: birthdate))
-                    completion(result)
-                }
+                self.createUser(user: user, name: name, email: email, birthdate: birthdate, completion: completion)
             }
+        }
+    }
+
+    private func createUser(user: FIRUser, name: String, email: String, birthdate: Date,
+                            completion: @escaping ((Result<UserEntity, AuthenticationError>) -> Void)) {
+        let reference = FIRDatabase.database().reference(fromURL: "http://birthtalk-e14dd.firebaseio.com")
+        let userReference = reference.child("users").child(user.uid)
+        let userDictionary = self.generateDictionary(name: name, email: email, birthdate: birthdate)
+
+        userReference.updateChildValues(userDictionary) { _, _ in
+            let result = RegisterResult.success(self.generateUserEntity(identifier: user.uid, name: name,
+                                                                        email: email, birthdate: birthdate))
+            completion(result)
         }
     }
 
