@@ -12,27 +12,28 @@ class AuthenticationGatewayFirebaseTests: XCTestCase {
     private let userName = "Name"
     private let userBirthdate = Date()
     private let userPassword = "somepassword"
-    private var firAuth: FIRAuth!
+    private var firAuth: FIRAuth = {
+        if FIRApp.defaultApp() == nil { FIRApp.configure() }
+        return FIRAuth.auth()!
+    }()
     private var gateway: AuthenticationGateway!
 
     override func setUp() {
         super.setUp()
-        if !isFireAppConfigurated {
-            isFireAppConfigurated = true
-            FIRApp.configure()
-        }
-        firAuth = FIRAuth.auth()
         gateway = AuthenticationGatewayFirebase(firAuth: firAuth)
     }
 
     override func tearDown() {
         super.tearDown()
-        guard let firAuth = firAuth, let firAuthCurrentUser = firAuth.currentUser else { return }
+        deleteCurrentUser()
+    }
 
+    private func deleteCurrentUser() {
+        guard let firAuthCurrentUser = firAuth.currentUser else { return }
         let reference = FIRDatabase.database().reference(fromURL: "http://birthtalk-e14dd.firebaseio.com")
         let userReference = reference.child("users").child(firAuthCurrentUser.uid)
-        userReference.removeValue()
 
+        userReference.removeValue()
         firAuthCurrentUser.delete { error in
             guard let error = error else { return }
             fatalError(error.localizedDescription)
@@ -52,8 +53,8 @@ class AuthenticationGatewayFirebaseTests: XCTestCase {
             longRunningExpectation.fulfill()
         }
 
-        waitForExpectations(timeout: 20) { error in
-            XCTAssertNil(error)
+        waitForExpectations(timeout: 20) { expectationError in
+            XCTAssertNil(expectationError)
             XCTAssertNil(authenticationError)
             XCTAssertNotNil(createdUser)
             XCTAssertEqual(self.userName, createdUser?.name)
@@ -66,18 +67,19 @@ class AuthenticationGatewayFirebaseTests: XCTestCase {
         let longRunningExpectation = expectation(description: "longRunningFunction")
         var authenticationError: AuthenticationError?
         var createdUser: UserEntity?
-        gateway.register(name: userName, email: userEmail, password: userPassword, birthdate: userBirthdate) { _ in }
-
-        gateway.register(name: userName, email: userEmail, password: userPassword, birthdate: userBirthdate) { result in
-            switch result {
-            case let .success(user): createdUser = user
-            case let .failure(error): authenticationError = error
+        gateway.register(name: userName, email: userEmail, password: userPassword, birthdate: userBirthdate) { _ in
+            self.gateway.register(name: self.userName, email: self.userEmail, password: self.userPassword,
+                                  birthdate: self.userBirthdate) { result in
+                switch result {
+                case let .success(user): createdUser = user
+                case let .failure(error): authenticationError = error
+                }
+                longRunningExpectation.fulfill()
             }
-            longRunningExpectation.fulfill()
         }
 
-        waitForExpectations(timeout: 20) { error in
-            XCTAssertNil(error)
+        waitForExpectations(timeout: 20) { expectationError in
+            XCTAssertNil(expectationError)
             XCTAssertNotNil(authenticationError)
             XCTAssertEqual(authenticationError, AuthenticationError.emailAlreadyInUse)
             XCTAssertNil(createdUser)
