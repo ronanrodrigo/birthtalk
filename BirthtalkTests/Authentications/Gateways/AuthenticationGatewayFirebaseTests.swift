@@ -29,7 +29,7 @@ class AuthenticationGatewayFirebaseTests: XCTestCase {
     private func deleteCurrentUser() {
         guard let firAuthCurrentUser = firAuth.currentUser else { return }
         let reference = FIRDatabase.database().reference(fromURL: Enviroment.firebaseDatabase.rawValue)
-        let userReference = reference.child("users").child(firAuthCurrentUser.uid)
+        let userReference = reference.child(DatabasePath.users.rawValue).child(firAuthCurrentUser.uid)
 
         userReference.removeValue()
         firAuthCurrentUser.delete { error in

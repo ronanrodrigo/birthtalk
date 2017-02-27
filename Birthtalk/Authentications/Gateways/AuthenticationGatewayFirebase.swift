@@ -29,7 +29,7 @@ struct  AuthenticationGatewayFirebase: AuthenticationGateway {
     private func createUser(user: FIRUser, name: String, email: String, birthdate: Date,
                             completion: @escaping ((Result<UserEntity, AuthenticationError>) -> Void)) {
         let reference = FIRDatabase.database().reference(fromURL: Enviroment.firebaseDatabase.rawValue)
-        let userReference = reference.child("users").child(user.uid)
+        let userReference = reference.child(DatabasePath.users.rawValue).child(user.uid)
         let userDictionary = self.generateDictionary(name: name, email: email, birthdate: birthdate)
 
         userReference.updateChildValues(userDictionary) { _, _ in
