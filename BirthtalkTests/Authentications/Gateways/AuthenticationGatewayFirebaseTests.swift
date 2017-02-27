@@ -4,8 +4,6 @@ import FirebaseAuth
 import FirebaseDatabase
 @testable import Birthtalk
 
-private var isFireAppConfigurated = false
-
 class AuthenticationGatewayFirebaseTests: XCTestCase {
 
     private let userEmail = "fake@gmail.com"
@@ -30,7 +28,7 @@ class AuthenticationGatewayFirebaseTests: XCTestCase {
 
     private func deleteCurrentUser() {
         guard let firAuthCurrentUser = firAuth.currentUser else { return }
-        let reference = FIRDatabase.database().reference(fromURL: "http://birthtalk-e14dd.firebaseio.com")
+        let reference = FIRDatabase.database().reference(fromURL: Enviroment.firebaseDatabase.rawValue)
         let userReference = reference.child("users").child(firAuthCurrentUser.uid)
 
         userReference.removeValue()
@@ -67,6 +65,7 @@ class AuthenticationGatewayFirebaseTests: XCTestCase {
         let longRunningExpectation = expectation(description: "longRunningFunction")
         var authenticationError: AuthenticationError?
         var createdUser: UserEntity?
+
         gateway.register(name: userName, email: userEmail, password: userPassword, birthdate: userBirthdate) { _ in
             self.gateway.register(name: self.userName, email: self.userEmail, password: self.userPassword,
                                   birthdate: self.userBirthdate) { result in

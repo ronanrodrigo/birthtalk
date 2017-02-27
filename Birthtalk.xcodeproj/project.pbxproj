@@ -13,6 +13,7 @@
 		341B09271E310EA6009DFC9A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B09261E310EA6009DFC9A /* User.swift */; };
 		341B092E1E311214009DFC9A /* AuthenticationGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B092D1E311214009DFC9A /* AuthenticationGateway.swift */; };
 		341B09311E3113E3009DFC9A /* AuthenticationGatewayStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B09301E3113E3009DFC9A /* AuthenticationGatewayStub.swift */; };
+		343908341E63B52B0098A1FF /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343908331E63B52B0098A1FF /* Enviroment.swift */; };
 		344551DC1E32B942003E35AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 344551DB1E32B942003E35AE /* GoogleService-Info.plist */; };
 		3449A3331E304A8D005A6755 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449A3321E304A8D005A6755 /* AppDelegate.swift */; };
 		3449A33A1E304A8D005A6755 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3449A3391E304A8D005A6755 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		341B09261E310EA6009DFC9A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		341B092D1E311214009DFC9A /* AuthenticationGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationGateway.swift; sourceTree = "<group>"; };
 		341B09301E3113E3009DFC9A /* AuthenticationGatewayStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationGatewayStub.swift; sourceTree = "<group>"; };
+		343908331E63B52B0098A1FF /* Enviroment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Enviroment.swift; path = Enviroment.swift; sourceTree = "<group>"; };
 		344551DB1E32B942003E35AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3449A32F1E304A8D005A6755 /* Birthtalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birthtalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3449A3321E304A8D005A6755 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		340687561E31782000B5B0E2 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				343908331E63B52B0098A1FF /* Enviroment.swift */,
 				340687571E31782D00B5B0E2 /* Result.swift */,
 			);
 			path = Commons;
@@ -247,7 +250,6 @@
 				341B092F1E3113D4009DFC9A /* Gateways */,
 				34B196331E305B37009587C8 /* Presenters */,
 			);
-			name = Doubles;
 			path = Doubles;
 			sourceTree = "<group>";
 		};
@@ -504,6 +506,7 @@
 				3480D3F21E328D1C00EAF9F4 /* AuthenticationGatewayFirebase.swift in Sources */,
 				341B09271E310EA6009DFC9A /* User.swift in Sources */,
 				34B196311E305B1B009587C8 /* RegisterUserPresenter.swift in Sources */,
+				343908341E63B52B0098A1FF /* Enviroment.swift in Sources */,
 				340687581E31782D00B5B0E2 /* Result.swift in Sources */,
 				341B092E1E311214009DFC9A /* AuthenticationGateway.swift in Sources */,
 				34B1962E1E305AFE009587C8 /* RegisterUserUsecase.swift in Sources */,
