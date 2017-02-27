@@ -32,14 +32,11 @@ class AuthenticationGatewayFirebaseTests: XCTestCase {
         let userReference = reference.child(DatabasePath.users.rawValue).child(firAuthCurrentUser.uid)
 
         userReference.removeValue()
-        firAuthCurrentUser.delete { error in
-            guard let error = error else { return }
-            fatalError(error.localizedDescription)
-        }
+        firAuthCurrentUser.delete { XCTAssertNil($0) }
     }
 
     func testRegisterNewUserAtFirebaseReturnTheUserTroughtResultHandler() {
-        let longRunningExpectation = expectation(description: "longRunningFunction")
+        let longRunningExpectation = expectation(description: "RegisterNewUser")
         var authenticationError: AuthenticationError?
         var createdUser: UserEntity?
 
@@ -62,7 +59,7 @@ class AuthenticationGatewayFirebaseTests: XCTestCase {
     }
 
     func testRegisterUserWithAlreadyInUseEmailAtFirebaseReturnEmailAlreadyInUseErrorTroughtResultHandler() {
-        let longRunningExpectation = expectation(description: "longRunningFunction")
+        let longRunningExpectation = expectation(description: "RegisterUserWithAlreadyInUseEmail")
         var authenticationError: AuthenticationError?
         var createdUser: UserEntity?
 
