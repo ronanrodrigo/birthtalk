@@ -18,7 +18,7 @@ class RegisterUserUsecaseTests: XCTestCase {
     override func setUp() {
         gateway = AuthenticationGatewayStub()
         presenter = RegisterUserPresenterStub()
-        usecase = RegisterUserUsecase(presenter: presenter, gateway: gateway)
+        usecase = RegisterUserUsecase(gateway: gateway, presenter: presenter)
     }
 
     func testRegisterAnUserWithEmptyEmailDisplayEmailErrorMessage() {
