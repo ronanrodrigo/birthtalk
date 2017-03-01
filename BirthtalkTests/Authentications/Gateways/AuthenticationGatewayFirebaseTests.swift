@@ -49,7 +49,7 @@ class AuthenticationGatewayFirebaseTests: XCTestCase {
         }
 
         waitForExpectations(timeout: 20) { expectationError in
-            XCTAssertNil(expectationError)
+            XCTAssertNil(expectationError, expectationError!.localizedDescription)
             XCTAssertNil(authenticationError)
             XCTAssertNotNil(createdUser)
             XCTAssertEqual(self.userName, createdUser?.name)
@@ -75,7 +75,7 @@ class AuthenticationGatewayFirebaseTests: XCTestCase {
         }
 
         waitForExpectations(timeout: 20) { expectationError in
-            XCTAssertNil(expectationError)
+            XCTAssertNil(expectationError, expectationError!.localizedDescription)
             XCTAssertNotNil(authenticationError)
             XCTAssertEqual(authenticationError, AuthenticationError.emailAlreadyInUse)
             XCTAssertNil(createdUser)
