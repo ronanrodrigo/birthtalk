@@ -4,15 +4,13 @@ import FirebaseDatabase
 
 struct  AuthenticationGatewayFirebase: AuthenticationGateway {
 
-    typealias RegisterResult = Result<UserEntity, AuthenticationError>
     private let firAuth: FIRAuth
 
     init(firAuth: FIRAuth) {
         self.firAuth = firAuth
     }
 
-    func register(name: String, email: String, password: String, birthdate: Date,
-                  completion: @escaping ((Result<UserEntity, AuthenticationError>) -> Void)) {
+    func register(name: String, email: String, password: String, birthdate: Date, completion: @escaping ((RegisterResult) -> Void)) {
         firAuth.createUser(withEmail: email, password: password) { user, error in
             if let authError = error {
                 let result = RegisterResult.failure(AuthenticationError(rawValue: authError._code))
@@ -21,20 +19,19 @@ struct  AuthenticationGatewayFirebase: AuthenticationGateway {
             }
 
             if let user = user {
-                self.createUser(user: user, name: name, email: email, birthdate: birthdate, completion: completion)
+                let userEntity = self.generateUserEntity(identifier: user.uid, name: name, email: email, birthdate: birthdate)
+                self.saveUserData(userId: user.uid, userEntity: userEntity, completion: completion)
             }
         }
     }
 
-    private func createUser(user: FIRUser, name: String, email: String, birthdate: Date,
-                            completion: @escaping ((Result<UserEntity, AuthenticationError>) -> Void)) {
+    private func saveUserData(userId: String, userEntity: UserEntity, completion: @escaping ((RegisterResult) -> Void)) {
         let reference = FIRDatabase.database().reference(fromURL: Enviroment.firebaseDatabase.rawValue)
-        let userReference = reference.child(DatabasePath.users.rawValue).child(user.uid)
-        let userDictionary = self.generateDictionary(name: name, email: email, birthdate: birthdate)
+        let userReference = reference.child(DatabasePath.users.rawValue).child(userId)
+        let userDictionary = self.generateDictionary(name: userEntity.name, email: userEntity.email, birthdate: userEntity.birthdate)
 
         userReference.updateChildValues(userDictionary) { _, _ in
-            let result = RegisterResult.success(self.generateUserEntity(identifier: user.uid, name: name,
-                                                                        email: email, birthdate: birthdate))
+            let result = RegisterResult.success(userEntity)
             completion(result)
         }
     }
