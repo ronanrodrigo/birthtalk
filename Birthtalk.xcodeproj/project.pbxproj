@@ -472,8 +472,8 @@
 			projectRoot = "";
 			targets = (
 				3449A32E1E304A8D005A6755 /* Birthtalk */,
-				3449A3421E304A8D005A6755 /* BirthtalkUnitTests */,
 				346C64041E6A07A700F909FD /* BirthtalkIntegrationTests */,
+				3449A3421E304A8D005A6755 /* BirthtalkUnitTests */,
 			);
 		};
 /* End PBXProject section */
