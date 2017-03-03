@@ -34,8 +34,18 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3449A3421E304A8D005A6755"
-               BuildableName = "BirthtalkTests.xctest"
-               BlueprintName = "BirthtalkTests"
+               BuildableName = "BirthtalkUnitTests.xctest"
+               BlueprintName = "BirthtalkUnitTests"
+               ReferencedContainer = "container:Birthtalk.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "346C64041E6A07A700F909FD"
+               BuildableName = "BirthtalkIntegrationTests.xctest"
+               BlueprintName = "BirthtalkIntegrationTests"
                ReferencedContainer = "container:Birthtalk.xcodeproj">
             </BuildableReference>
          </TestableReference>

@@ -23,9 +23,9 @@
 		346C63FC1E699E2B00F909FD /* ValidateEmailEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346C63FB1E699E2B00F909FD /* ValidateEmailEntityTests.swift */; };
 		346C63FE1E69A16700F909FD /* ValidateNameEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346C63FD1E69A16700F909FD /* ValidateNameEntityTests.swift */; };
 		346C64001E69A1DF00F909FD /* ValidatePasswordEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346C63FF1E69A1DF00F909FD /* ValidatePasswordEntityTests.swift */; };
+		346C64111E6A085F00F909FD /* AuthenticationGatewayFirebaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CB98B1E361F0900BC5751 /* AuthenticationGatewayFirebaseTests.swift */; };
 		3480D3F21E328D1C00EAF9F4 /* AuthenticationGatewayFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480D3F11E328D1C00EAF9F4 /* AuthenticationGatewayFirebase.swift */; };
 		349CB9891E361B3F00BC5751 /* AuthenticationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CB9881E361B3F00BC5751 /* AuthenticationErrorTests.swift */; };
-		349CB98C1E361F0900BC5751 /* AuthenticationGatewayFirebaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CB98B1E361F0900BC5751 /* AuthenticationGatewayFirebaseTests.swift */; };
 		34B1962E1E305AFE009587C8 /* RegisterUserUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B1962D1E305AFE009587C8 /* RegisterUserUsecase.swift */; };
 		34B196311E305B1B009587C8 /* RegisterUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B196301E305B1B009587C8 /* RegisterUserPresenter.swift */; };
 		34B196351E305B43009587C8 /* RegisterUserPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B196341E305B43009587C8 /* RegisterUserPresenterStub.swift */; };
@@ -33,7 +33,9 @@
 		34FB40E51E690AE3006B72C0 /* ValidateNameEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB40E41E690AE3006B72C0 /* ValidateNameEntity.swift */; };
 		34FB40E71E690AF8006B72C0 /* ValidatePasswordEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB40E61E690AF8006B72C0 /* ValidatePasswordEntity.swift */; };
 		34FB40E91E691CA2006B72C0 /* AuthenticationErrorValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB40E81E691CA2006B72C0 /* AuthenticationErrorValidator.swift */; };
+		3F48A7DB94DF0388444F5C20 /* Pods_Birthtalk_BirthtalkIntegrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CF15B673B628AA678232A98 /* Pods_Birthtalk_BirthtalkIntegrationTests.framework */; };
 		96E2C5D8FFC02FA20ADA4B6C /* Pods_Birthtalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE151884EDA031A2DB74921 /* Pods_Birthtalk.framework */; };
+		C6AB86990C6DF3486EE1E0EE /* Pods_Birthtalk_BirthtalkUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8FD398F10E48442AF87CCC /* Pods_Birthtalk_BirthtalkUnitTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,9 +46,17 @@
 			remoteGlobalIDString = 3449A32E1E304A8D005A6755;
 			remoteInfo = Birthtalk;
 		};
+		346C640A1E6A07A700F909FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3449A3271E304A8D005A6755 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3449A32E1E304A8D005A6755;
+			remoteInfo = Birthtalk;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01A6CBFDAE07757A79379B69 /* Pods-Birthtalk-BirthtalkIntegrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthtalk-BirthtalkIntegrationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Birthtalk-BirthtalkIntegrationTests/Pods-Birthtalk-BirthtalkIntegrationTests.release.xcconfig"; sourceTree = "<group>"; };
 		0D5B206E8AA3F6F5D1305212 /* Pods-Birthtalk-BirthtalkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthtalk-BirthtalkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Birthtalk-BirthtalkTests/Pods-Birthtalk-BirthtalkTests.release.xcconfig"; sourceTree = "<group>"; };
 		0FE151884EDA031A2DB74921 /* Pods_Birthtalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Birthtalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		340687541E31744500B5B0E2 /* AuthenticationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
@@ -62,12 +72,14 @@
 		3449A3391E304A8D005A6755 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3449A33C1E304A8D005A6755 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3449A33E1E304A8D005A6755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3449A3431E304A8D005A6755 /* BirthtalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BirthtalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3449A3431E304A8D005A6755 /* BirthtalkUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BirthtalkUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3449A3491E304A8E005A6755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3449A3571E304D36005A6755 /* RegisterUserUsecaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserUsecaseTests.swift; sourceTree = "<group>"; };
 		346C63FB1E699E2B00F909FD /* ValidateEmailEntityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidateEmailEntityTests.swift; sourceTree = "<group>"; };
 		346C63FD1E69A16700F909FD /* ValidateNameEntityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidateNameEntityTests.swift; sourceTree = "<group>"; };
 		346C63FF1E69A1DF00F909FD /* ValidatePasswordEntityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatePasswordEntityTests.swift; sourceTree = "<group>"; };
+		346C64051E6A07A700F909FD /* BirthtalkIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BirthtalkIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		346C64091E6A07A700F909FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3480D3F11E328D1C00EAF9F4 /* AuthenticationGatewayFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationGatewayFirebase.swift; sourceTree = "<group>"; };
 		349CB9881E361B3F00BC5751 /* AuthenticationErrorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorTests.swift; sourceTree = "<group>"; };
 		349CB98B1E361F0900BC5751 /* AuthenticationGatewayFirebaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationGatewayFirebaseTests.swift; sourceTree = "<group>"; };
@@ -79,7 +91,12 @@
 		34FB40E61E690AF8006B72C0 /* ValidatePasswordEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatePasswordEntity.swift; sourceTree = "<group>"; };
 		34FB40E81E691CA2006B72C0 /* AuthenticationErrorValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorValidator.swift; sourceTree = "<group>"; };
 		406DD59A7D68DB86E4BB166A /* Pods-Birthtalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthtalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Birthtalk/Pods-Birthtalk.debug.xcconfig"; sourceTree = "<group>"; };
+		5CF15B673B628AA678232A98 /* Pods_Birthtalk_BirthtalkIntegrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Birthtalk_BirthtalkIntegrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F8FD398F10E48442AF87CCC /* Pods_Birthtalk_BirthtalkUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Birthtalk_BirthtalkUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7207DF9CE3D20E95CABC236D /* Pods-Birthtalk-BirthtalkUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthtalk-BirthtalkUnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Birthtalk-BirthtalkUnitTests/Pods-Birthtalk-BirthtalkUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9666A1836DBBFFA28048E5FF /* Pods-Birthtalk-BirthtalkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthtalk-BirthtalkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Birthtalk-BirthtalkTests/Pods-Birthtalk-BirthtalkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC00274FAF05BEC1238E31C8 /* Pods-Birthtalk-BirthtalkIntegrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthtalk-BirthtalkIntegrationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Birthtalk-BirthtalkIntegrationTests/Pods-Birthtalk-BirthtalkIntegrationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B6B52AE64FB1BFCFB79217E7 /* Pods-Birthtalk-BirthtalkUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthtalk-BirthtalkUnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Birthtalk-BirthtalkUnitTests/Pods-Birthtalk-BirthtalkUnitTests.release.xcconfig"; sourceTree = "<group>"; };
 		C4CA944E658853B5F6DA602A /* Pods_Birthtalk_BirthtalkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Birthtalk_BirthtalkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF862D433D27032346D8D43 /* Pods-Birthtalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthtalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Birthtalk/Pods-Birthtalk.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +115,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				01CB90662F09BFFB2B4E8F9C /* Pods_Birthtalk_BirthtalkTests.framework in Frameworks */,
+				C6AB86990C6DF3486EE1E0EE /* Pods_Birthtalk_BirthtalkUnitTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		346C64021E6A07A700F909FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F48A7DB94DF0388444F5C20 /* Pods_Birthtalk_BirthtalkIntegrationTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				3449A3311E304A8D005A6755 /* Birthtalk */,
-				3449A3461E304A8E005A6755 /* BirthtalkTests */,
+				346C64061E6A07A700F909FD /* BirthtalkIntegrationTests */,
+				3449A3461E304A8E005A6755 /* BirthtalkUnitTests */,
 				953EB7EF19CA936FE409D271 /* Frameworks */,
 				7668D9EF7443F9FCE166D539 /* Pods */,
 				3449A3301E304A8D005A6755 /* Products */,
@@ -159,7 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				3449A32F1E304A8D005A6755 /* Birthtalk.app */,
-				3449A3431E304A8D005A6755 /* BirthtalkTests.xctest */,
+				3449A3431E304A8D005A6755 /* BirthtalkUnitTests.xctest */,
+				346C64051E6A07A700F909FD /* BirthtalkIntegrationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,13 +202,13 @@
 			path = Birthtalk;
 			sourceTree = "<group>";
 		};
-		3449A3461E304A8E005A6755 /* BirthtalkTests */ = {
+		3449A3461E304A8E005A6755 /* BirthtalkUnitTests */ = {
 			isa = PBXGroup;
 			children = (
 				3449A3551E304CED005A6755 /* Authentications */,
 				3449A3531E304B5C005A6755 /* Base */,
 			);
-			path = BirthtalkTests;
+			path = BirthtalkUnitTests;
 			sourceTree = "<group>";
 		};
 		3449A3521E304B56005A6755 /* Base */ = {
@@ -208,7 +236,6 @@
 			children = (
 				34B196321E305B32009587C8 /* Doubles */,
 				349CB9871E361B2E00BC5751 /* Entities */,
-				349CB98A1E361EFC00BC5751 /* Gateways */,
 				3449A3561E304D00005A6755 /* Usecases */,
 			);
 			path = Authentications;
@@ -220,6 +247,31 @@
 				3449A3571E304D36005A6755 /* RegisterUserUsecaseTests.swift */,
 			);
 			path = Usecases;
+			sourceTree = "<group>";
+		};
+		346C64061E6A07A700F909FD /* BirthtalkIntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				346C64101E6A07D700F909FD /* Authentications */,
+				346C640F1E6A07D300F909FD /* Base */,
+			);
+			path = BirthtalkIntegrationTests;
+			sourceTree = "<group>";
+		};
+		346C640F1E6A07D300F909FD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				346C64091E6A07A700F909FD /* Info.plist */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		346C64101E6A07D700F909FD /* Authentications */ = {
+			isa = PBXGroup;
+			children = (
+				349CB98A1E361EFC00BC5751 /* Gateways */,
+			);
+			path = Authentications;
 			sourceTree = "<group>";
 		};
 		349CB9871E361B2E00BC5751 /* Entities */ = {
@@ -292,6 +344,10 @@
 				CFF862D433D27032346D8D43 /* Pods-Birthtalk.release.xcconfig */,
 				9666A1836DBBFFA28048E5FF /* Pods-Birthtalk-BirthtalkTests.debug.xcconfig */,
 				0D5B206E8AA3F6F5D1305212 /* Pods-Birthtalk-BirthtalkTests.release.xcconfig */,
+				AC00274FAF05BEC1238E31C8 /* Pods-Birthtalk-BirthtalkIntegrationTests.debug.xcconfig */,
+				01A6CBFDAE07757A79379B69 /* Pods-Birthtalk-BirthtalkIntegrationTests.release.xcconfig */,
+				7207DF9CE3D20E95CABC236D /* Pods-Birthtalk-BirthtalkUnitTests.debug.xcconfig */,
+				B6B52AE64FB1BFCFB79217E7 /* Pods-Birthtalk-BirthtalkUnitTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -301,6 +357,8 @@
 			children = (
 				0FE151884EDA031A2DB74921 /* Pods_Birthtalk.framework */,
 				C4CA944E658853B5F6DA602A /* Pods_Birthtalk_BirthtalkTests.framework */,
+				5CF15B673B628AA678232A98 /* Pods_Birthtalk_BirthtalkIntegrationTests.framework */,
+				6F8FD398F10E48442AF87CCC /* Pods_Birthtalk_BirthtalkUnitTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -329,9 +387,9 @@
 			productReference = 3449A32F1E304A8D005A6755 /* Birthtalk.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3449A3421E304A8D005A6755 /* BirthtalkTests */ = {
+		3449A3421E304A8D005A6755 /* BirthtalkUnitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3449A34F1E304A8E005A6755 /* Build configuration list for PBXNativeTarget "BirthtalkTests" */;
+			buildConfigurationList = 3449A34F1E304A8E005A6755 /* Build configuration list for PBXNativeTarget "BirthtalkUnitTests" */;
 			buildPhases = (
 				B5718834DB5C37F1637330B7 /* [CP] Check Pods Manifest.lock */,
 				3449A33F1E304A8D005A6755 /* Sources */,
@@ -345,9 +403,30 @@
 			dependencies = (
 				3449A3451E304A8D005A6755 /* PBXTargetDependency */,
 			);
-			name = BirthtalkTests;
+			name = BirthtalkUnitTests;
 			productName = BirthtalkTests;
-			productReference = 3449A3431E304A8D005A6755 /* BirthtalkTests.xctest */;
+			productReference = 3449A3431E304A8D005A6755 /* BirthtalkUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		346C64041E6A07A700F909FD /* BirthtalkIntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 346C640E1E6A07A700F909FD /* Build configuration list for PBXNativeTarget "BirthtalkIntegrationTests" */;
+			buildPhases = (
+				50CEB995394322FD018CE342 /* [CP] Check Pods Manifest.lock */,
+				346C64011E6A07A700F909FD /* Sources */,
+				346C64021E6A07A700F909FD /* Frameworks */,
+				346C64031E6A07A700F909FD /* Resources */,
+				603CD8694020916587D9396C /* [CP] Embed Pods Frameworks */,
+				6C6CBB9857F36E4FC52AB10F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				346C640B1E6A07A700F909FD /* PBXTargetDependency */,
+			);
+			name = BirthtalkIntegrationTests;
+			productName = BirthtalkIntegrationTests;
+			productReference = 346C64051E6A07A700F909FD /* BirthtalkIntegrationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -372,6 +451,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3449A32E1E304A8D005A6755;
 					};
+					346C64041E6A07A700F909FD = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3449A32E1E304A8D005A6755;
+					};
 				};
 			};
 			buildConfigurationList = 3449A32A1E304A8D005A6755 /* Build configuration list for PBXProject "Birthtalk" */;
@@ -388,7 +472,8 @@
 			projectRoot = "";
 			targets = (
 				3449A32E1E304A8D005A6755 /* Birthtalk */,
-				3449A3421E304A8D005A6755 /* BirthtalkTests */,
+				3449A3421E304A8D005A6755 /* BirthtalkUnitTests */,
+				346C64041E6A07A700F909FD /* BirthtalkIntegrationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -405,6 +490,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3449A3411E304A8D005A6755 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		346C64031E6A07A700F909FD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -455,7 +547,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Birthtalk-BirthtalkTests/Pods-Birthtalk-BirthtalkTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Birthtalk-BirthtalkUnitTests/Pods-Birthtalk-BirthtalkUnitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50CEB995394322FD018CE342 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		603CD8694020916587D9396C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Birthtalk-BirthtalkIntegrationTests/Pods-Birthtalk-BirthtalkIntegrationTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C6CBB9857F36E4FC52AB10F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Birthtalk-BirthtalkIntegrationTests/Pods-Birthtalk-BirthtalkIntegrationTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8C78C9EEEDE8F3303F9C8339 /* [CP] Embed Pods Frameworks */ = {
@@ -470,7 +607,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Birthtalk-BirthtalkTests/Pods-Birthtalk-BirthtalkTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Birthtalk-BirthtalkUnitTests/Pods-Birthtalk-BirthtalkUnitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B5718834DB5C37F1637330B7 /* [CP] Check Pods Manifest.lock */ = {
@@ -553,7 +690,14 @@
 				346C63FC1E699E2B00F909FD /* ValidateEmailEntityTests.swift in Sources */,
 				341B09311E3113E3009DFC9A /* AuthenticationGatewayStub.swift in Sources */,
 				346C63FE1E69A16700F909FD /* ValidateNameEntityTests.swift in Sources */,
-				349CB98C1E361F0900BC5751 /* AuthenticationGatewayFirebaseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		346C64011E6A07A700F909FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				346C64111E6A085F00F909FD /* AuthenticationGatewayFirebaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +708,11 @@
 			isa = PBXTargetDependency;
 			target = 3449A32E1E304A8D005A6755 /* Birthtalk */;
 			targetProxy = 3449A3441E304A8D005A6755 /* PBXContainerItemProxy */;
+		};
+		346C640B1E6A07A700F909FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3449A32E1E304A8D005A6755 /* Birthtalk */;
+			targetProxy = 346C640A1E6A07A700F909FD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -705,13 +854,13 @@
 		};
 		3449A3501E304A8E005A6755 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9666A1836DBBFFA28048E5FF /* Pods-Birthtalk-BirthtalkTests.debug.xcconfig */;
+			baseConfigurationReference = 7207DF9CE3D20E95CABC236D /* Pods-Birthtalk-BirthtalkUnitTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2729VXDM4D;
-				INFOPLIST_FILE = BirthtalkTests/Base/Info.plist;
+				INFOPLIST_FILE = BirthtalkUnitTests/Base/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.ronanrodrigo.BirthtalkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -723,15 +872,43 @@
 		};
 		3449A3511E304A8E005A6755 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D5B206E8AA3F6F5D1305212 /* Pods-Birthtalk-BirthtalkTests.release.xcconfig */;
+			baseConfigurationReference = B6B52AE64FB1BFCFB79217E7 /* Pods-Birthtalk-BirthtalkUnitTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2729VXDM4D;
-				INFOPLIST_FILE = BirthtalkTests/Base/Info.plist;
+				INFOPLIST_FILE = BirthtalkUnitTests/Base/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.ronanrodrigo.BirthtalkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Birthtalk.app/Birthtalk";
+			};
+			name = Release;
+		};
+		346C640C1E6A07A700F909FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC00274FAF05BEC1238E31C8 /* Pods-Birthtalk-BirthtalkIntegrationTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BirthtalkIntegrationTests/Base/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.BirthtalkIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Birthtalk.app/Birthtalk";
+			};
+			name = Debug;
+		};
+		346C640D1E6A07A700F909FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01A6CBFDAE07757A79379B69 /* Pods-Birthtalk-BirthtalkIntegrationTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BirthtalkIntegrationTests/Base/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.BirthtalkIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Birthtalk.app/Birthtalk";
@@ -759,11 +936,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3449A34F1E304A8E005A6755 /* Build configuration list for PBXNativeTarget "BirthtalkTests" */ = {
+		3449A34F1E304A8E005A6755 /* Build configuration list for PBXNativeTarget "BirthtalkUnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3449A3501E304A8E005A6755 /* Debug */,
 				3449A3511E304A8E005A6755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		346C640E1E6A07A700F909FD /* Build configuration list for PBXNativeTarget "BirthtalkIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				346C640C1E6A07A700F909FD /* Debug */,
+				346C640D1E6A07A700F909FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
