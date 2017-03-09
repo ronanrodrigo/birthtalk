@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01CB90662F09BFFB2B4E8F9C /* Pods_Birthtalk_BirthtalkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4CA944E658853B5F6DA602A /* Pods_Birthtalk_BirthtalkTests.framework */; };
 		340687551E31744500B5B0E2 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340687541E31744500B5B0E2 /* AuthenticationError.swift */; };
 		340687581E31782D00B5B0E2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340687571E31782D00B5B0E2 /* Result.swift */; };
 		341B09271E310EA6009DFC9A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B09261E310EA6009DFC9A /* User.swift */; };
@@ -114,7 +113,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01CB90662F09BFFB2B4E8F9C /* Pods_Birthtalk_BirthtalkTests.framework in Frameworks */,
 				C6AB86990C6DF3486EE1E0EE /* Pods_Birthtalk_BirthtalkUnitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
