@@ -21,7 +21,7 @@ message("Test Comment on PR")
 slather.configure("Birthtalk.xcodeproj", "Birthtalk", options: {
   workspace: 'Birthtalk.xcworkspace',
   output_directory: "coverage",
-  ci_service: :travis,
+  ci_service: :bitrise,
   coverage_service: :terminal,
 })
 
