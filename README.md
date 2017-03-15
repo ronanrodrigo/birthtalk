@@ -2,7 +2,9 @@
 <img src="https://raw.githubusercontent.com/ronanrodrigo/birthtalk/master/Birthtalk/Base/AppIcon.png" height=25/>
 Birthtalk
 </h1>
-[![Build Status](https://www.bitrise.io/app/b4dee8da6855abcf.svg?token=PZRRPLn8fE63D9oTQ48LrQ&branch=master)](https://www.bitrise.io/app/b4dee8da6855abcf) [![Codecov](https://codecov.io/github/ronanrodrigo/birthtalk/coverage.svg?precision=2)](https://codecov.io/gh/ronanrodrigo/birthtalk) [![Code Climate](https://codeclimate.com/github/ronanrodrigo/birthtalk/badges/gpa.svg)](https://codeclimate.com/github/ronanrodrigo/birthtalk)
+[![Build Status](https://www.bitrise.io/app/b4dee8da6855abcf.svg?token=PZRRPLn8fE63D9oTQ48LrQ&branch=master)](https://www.bitrise.io/app/b4dee8da6855abcf)
+[![Codecov](https://codecov.io/github/ronanrodrigo/birthtalk/coverage.svg?precision=2)](https://codecov.io/gh/ronanrodrigo/birthtalk)
+[![Code Climate](https://codeclimate.com/github/ronanrodrigo/birthtalk/badges/gpa.svg)](https://codeclimate.com/github/ronanrodrigo/birthtalk)
 
 -------
 <p align="center">
@@ -11,6 +13,7 @@ Birthtalk
   <a href="#installation">Instalation</a> •
   <a href="#tests">Tests</a>
 </p>
+
 -------
 
 ## Motivation
@@ -19,7 +22,8 @@ In a world where delivery is almost more important than the good code, I decided
 This Application will automatically create chat groups where people talk with others that have common things based on their births. It will be possible to meet who born at same day/month/year, or same day/month, or same day/month/year/city, or same zodiac sign and among other combinations.
 
 ## Posts
-- [First post: Authentication rules in a handcrafted iOS application with TDD](https://medium.com/cocoaacademymag/authentication-rules-in-a-handcrafted-ios-application-with-tdd-8db5396ebac6#.7kq4cc2x5)
+- [Authentication rules in a handcrafted iOS application with TDD](https://medium.com/cocoaacademymag/authentication-rules-in-a-handcrafted-ios-application-with-tdd-8db5396ebac6#.7kq4cc2x5)
+- [Firebase user registration at iOS with integration tests] https://medium.com/cocoaacademymag/firebase-user-registration-at-ios-with-integration-tests-fa450e4ec8bb
 
 ## Installation
 This application does not have directly dependencies and libraries. But at development environment I use some tools like **[Fastlane](http://fastlane.tools)**, **[Danger](http://danger.systems)**, **[Danger Slather](https://github.com/SlatherOrg/slather)** and **[Swift Lint](https://github.com/realm/SwiftLint)**. The first three tools are  installed with ruby bundler gem and the Swift Lint is installed with brew.
