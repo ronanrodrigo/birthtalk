@@ -24,7 +24,7 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
-    scan(scheme: "Birthtalk")
+    scan(scheme: "Birthtalk", device: 'iPhone 5s')
     slather(
       output_directory: "coverage",
       workspace: "Birthtalk.xcworkspace",
