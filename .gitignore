@@ -34,6 +34,7 @@ playground.xcworkspace
 Pods/
 
 # fastlane
+fastlane/README.md
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
