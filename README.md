@@ -25,6 +25,7 @@ This Application will automatically create chat groups where people talk with ot
 ## Posts
 - [Authentication rules in a handcrafted iOS application with TDD](https://medium.com/cocoaacademymag/authentication-rules-in-a-handcrafted-ios-application-with-tdd-8db5396ebac6#.7kq4cc2x5)
 - [Firebase user registration at iOS with integration tests](https://medium.com/cocoaacademymag/firebase-user-registration-at-ios-with-integration-tests-fa450e4ec8bb)
+- [The first refactor in the user registration use case](https://medium.com/cocoaacademymag/the-first-refactor-in-the-user-registration-use-case-238240a29972)
 
 ## Installation
 This application does not have directly dependencies and libraries. But at development environment I use some tools like **[Fastlane](http://fastlane.tools)**, **[Danger](http://danger.systems)**, **[Danger Slather](https://github.com/SlatherOrg/slather)** and **[Swift Lint](https://github.com/realm/SwiftLint)**. The first three tools are  installed with ruby bundler gem and the Swift Lint is installed with brew.
