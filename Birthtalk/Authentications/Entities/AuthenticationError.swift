@@ -11,18 +11,19 @@ enum AuthenticationError: Error {
     case credentialAlreadyInUse
     case unknown
 
+    private static let errorByCode: [Int: AuthenticationError] = [
+        17005: .userDisabled,
+        17007: .emailAlreadyInUse,
+        17008: .invalidEmail,
+        17009: .wrongPassword,
+        17011: .userNotFound,
+        17012: .accountExistsWithDifferentCredential,
+        17020: .networkError,
+        17025: .credentialAlreadyInUse,
+        17026: .invalidPassword
+    ]
+
     init(rawValue: Int) {
-        switch rawValue {
-        case 17005: self = .userDisabled
-        case 17007: self = .emailAlreadyInUse
-        case 17008: self = .invalidEmail
-        case 17009: self = .wrongPassword
-        case 17011: self = .userNotFound
-        case 17012: self = .accountExistsWithDifferentCredential
-        case 17020: self = .networkError
-        case 17025: self = .credentialAlreadyInUse
-        case 17026: self = .invalidPassword
-        default: self = .unknown
-        }
+        self = AuthenticationError.errorByCode[rawValue] ?? .unknown
     }
 }
