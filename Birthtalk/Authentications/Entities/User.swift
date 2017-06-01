@@ -1,5 +1,7 @@
 import Foundation
 
+public typealias RegisterUserBasicParams = (name: String, email: String, password: String, birthdate: Date)
+
 protocol User {
     var identifier: String? { get }
     var name: String { get }

@@ -24,9 +24,9 @@ class RegisterUserUsecaseTests: XCTestCase {
     func testRegisterAnUserWithEmptyEmailDisplayEmailErrorMessage() {
         let user = generateUserEntity(email: empty)
 
-        let registerUserParams = RegisterUserUsecaseParams(name: user.name, email: user.email, password: validPassword,
+        let userParams = RegisterUserBasicParams(name: user.name, email: user.email, password: validPassword,
                                                            birthdate: user.birthdate)
-        usecase.register(registerUserParams: registerUserParams)
+        usecase.register(userParams: userParams)
 
         XCTAssertTrue(presenter.shownInvalidEmailErrorMessage)
         XCTAssertFalse(presenter.shownEmptyNameErrorMessage)
@@ -38,9 +38,9 @@ class RegisterUserUsecaseTests: XCTestCase {
     func testRegisterAnUserWithInvalidEmailDisplayEmailErrorMessage() {
         let user = generateUserEntity(email: invalidEmail)
 
-        let registerUserParams = RegisterUserUsecaseParams(name: user.name, email: user.email, password: validPassword,
+        let userParams = RegisterUserBasicParams(name: user.name, email: user.email, password: validPassword,
                                                            birthdate: user.birthdate)
-        usecase.register(registerUserParams: registerUserParams)
+        usecase.register(userParams: userParams)
 
         XCTAssertTrue(presenter.shownInvalidEmailErrorMessage)
         XCTAssertFalse(presenter.shownEmptyNameErrorMessage)
@@ -52,9 +52,9 @@ class RegisterUserUsecaseTests: XCTestCase {
     func testRegisterAnUserWithEmptyNameDisplayNameErrorMessage() {
         let user = generateUserEntity(name: empty)
 
-        let registerUserParams = RegisterUserUsecaseParams(name: user.name, email: user.email, password: validPassword,
+        let userParams = RegisterUserBasicParams(name: user.name, email: user.email, password: validPassword,
                                                            birthdate: user.birthdate)
-        usecase.register(registerUserParams: registerUserParams)
+        usecase.register(userParams: userParams)
 
         XCTAssertTrue(presenter.shownEmptyNameErrorMessage)
         XCTAssertFalse(presenter.shownInvalidEmailErrorMessage)
@@ -66,9 +66,9 @@ class RegisterUserUsecaseTests: XCTestCase {
     func testRegisterAnUserWithEmptyPasswordDisplayPasswordErrorMessage() {
         let user = generateUserEntity()
 
-        let registerUserParams = RegisterUserUsecaseParams(name: user.name, email: user.email, password: empty,
+        let userParams = RegisterUserBasicParams(name: user.name, email: user.email, password: empty,
                                                            birthdate: user.birthdate)
-        usecase.register(registerUserParams: registerUserParams)
+        usecase.register(userParams: userParams)
 
         XCTAssertTrue(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertFalse(presenter.shownInvalidEmailErrorMessage)
@@ -80,9 +80,9 @@ class RegisterUserUsecaseTests: XCTestCase {
     func testRegisterAnUserWithoutAtLeastFiveCharactersInThePasswordDisplayPasswordErrorMessage() {
         let user = generateUserEntity()
 
-        let registerUserParams = RegisterUserUsecaseParams(name: user.name, email: user.email, password: smallPassword,
+        let userParams = RegisterUserBasicParams(name: user.name, email: user.email, password: smallPassword,
                                                            birthdate: user.birthdate)
-        usecase.register(registerUserParams: registerUserParams)
+        usecase.register(userParams: userParams)
 
         XCTAssertTrue(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertFalse(presenter.shownInvalidEmailErrorMessage)
@@ -94,9 +94,9 @@ class RegisterUserUsecaseTests: XCTestCase {
     func testRegisterAnUserWithAllEmptyInputDisplayAllErrorMessages() {
         let user = generateUserEntity(name: empty, email: empty)
 
-        let registerUserParams = RegisterUserUsecaseParams(name: user.name, email: user.email, password: empty,
+        let userParams = RegisterUserBasicParams(name: user.name, email: user.email, password: empty,
                                                            birthdate: user.birthdate)
-        usecase.register(registerUserParams: registerUserParams)
+        usecase.register(userParams: userParams)
 
         XCTAssertTrue(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertTrue(presenter.shownInvalidEmailErrorMessage)
@@ -108,9 +108,9 @@ class RegisterUserUsecaseTests: XCTestCase {
     func testRegisterAnUserWithAllInvalidInputDisplayAllErrorMessages() {
         let user = generateUserEntity(name: empty, email: empty)
 
-        let registerUserParams = RegisterUserUsecaseParams(name: user.name, email: user.email, password: smallPassword,
+        let userParams = RegisterUserBasicParams(name: user.name, email: user.email, password: smallPassword,
                                                            birthdate: user.birthdate)
-        usecase.register(registerUserParams: registerUserParams)
+        usecase.register(userParams: userParams)
 
         XCTAssertTrue(presenter.shownInvalidPasswordErrorMessage)
         XCTAssertTrue(presenter.shownInvalidEmailErrorMessage)
@@ -123,9 +123,9 @@ class RegisterUserUsecaseTests: XCTestCase {
         let user = generateUserEntity()
         gateway.registerResult = Result.success(user)
 
-        let registerUserParams = RegisterUserUsecaseParams(name: user.name, email: user.email, password: validPassword,
+        let userParams = RegisterUserBasicParams(name: user.name, email: user.email, password: validPassword,
                                                            birthdate: user.birthdate)
-        usecase.register(registerUserParams: registerUserParams)
+        usecase.register(userParams: userParams)
 
         XCTAssertNotNil(gateway.registeredUser)
         XCTAssertEqual(gateway.registeredUser!.email, user.email)
@@ -140,9 +140,9 @@ class RegisterUserUsecaseTests: XCTestCase {
         gateway.registerResult = Result.failure(AuthenticationError.networkError)
         let user = generateUserEntity()
 
-        let registerUserParams = RegisterUserUsecaseParams(name: user.name, email: user.email, password: validPassword,
+        let userParams = RegisterUserBasicParams(name: user.name, email: user.email, password: validPassword,
                                                            birthdate: user.birthdate)
-        usecase.register(registerUserParams: registerUserParams)
+        usecase.register(userParams: userParams)
 
         XCTAssertTrue(presenter.showInvalidRequestErrorMessage)
         XCTAssertNil(gateway.registeredUser)

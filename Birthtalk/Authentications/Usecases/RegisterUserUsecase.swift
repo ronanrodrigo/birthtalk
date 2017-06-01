@@ -1,7 +1,5 @@
 import Foundation
 
-typealias RegisterUserUsecaseParams = (name: String, email: String, password: String, birthdate: Date)
-
 struct RegisterUserUsecase {
 
     private let gateway: AuthenticationGateway
@@ -12,20 +10,18 @@ struct RegisterUserUsecase {
         self.presenter = presenter
     }
 
-    func register(registerUserParams: RegisterUserUsecaseParams) {
+    func register(userParams: RegisterUserBasicParams) {
         let invalidInputs: [AuthenticationErrorValidator] = [
-            ValidateEmailEntity(email: registerUserParams.email),
-            ValidateNameEntity(name: registerUserParams.name),
-            ValidatePasswordEntity(password: registerUserParams.password)]
+            ValidateEmailEntity(email: userParams.email),
+            ValidateNameEntity(name: userParams.name),
+            ValidatePasswordEntity(password: userParams.password)]
             .filter { !$0.isValid() }
 
         invalidInputs.forEach { presenter.failure(error: $0.error) }
 
         let isWithoutErrors = invalidInputs.count == 0
         if isWithoutErrors {
-            gateway.register(name: registerUserParams.name, email: registerUserParams.email,
-                             password: registerUserParams.password, birthdate: registerUserParams.birthdate,
-                             completion: presentResult)
+            gateway.register(userParams: userParams, completion: presentResult)
         }
     }
 
