@@ -11,7 +11,9 @@ class AuthenticationGatewayFirebaseTests: XCTestCase {
     private let userBirthdate = Date()
     private let userPassword = "somepassword"
     private var firAuth: FIRAuth = {
-        if FIRApp.defaultApp() == nil { FIRApp.configure() }
+        if FIRApp.defaultApp() == nil {
+            FIRApp.configure()
+        }
         return FIRAuth.auth()!
     }()
     private var gateway: AuthenticationGateway!
