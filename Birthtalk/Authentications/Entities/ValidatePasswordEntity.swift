@@ -10,7 +10,9 @@ struct ValidatePasswordEntity: AuthenticationErrorValidator {
     }
 
     func isValid() -> Bool {
-        if password.characters.count < 5 { return false }
+        if password.characters.count < 5 {
+            return false
+        }
         return true
     }
 

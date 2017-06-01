@@ -10,7 +10,9 @@ struct ValidateNameEntity: AuthenticationErrorValidator {
     }
 
     func isValid() -> Bool {
-        if name.isEmpty { return false }
+        if name.isEmpty {
+            return false
+        }
         return true
     }
 
