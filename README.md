@@ -5,7 +5,6 @@ Birthtalk
 
 [![Build Status](https://www.bitrise.io/app/b4dee8da6855abcf.svg?token=PZRRPLn8fE63D9oTQ48LrQ&branch=master)](https://www.bitrise.io/app/b4dee8da6855abcf)
 [![Codecov](https://codecov.io/github/ronanrodrigo/birthtalk/coverage.svg?precision=2)](https://codecov.io/gh/ronanrodrigo/birthtalk)
-[![Code Climate](https://codeclimate.com/github/ronanrodrigo/birthtalk/badges/gpa.svg)](https://codeclimate.com/github/ronanrodrigo/birthtalk)
 [![codebeat badge](https://codebeat.co/badges/5b082024-2523-4ea1-a64b-84915814a346)](https://codebeat.co/projects/github-com-ronanrodrigo-birthtalk-master)
 
 -------
