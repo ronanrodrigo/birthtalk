@@ -10,8 +10,8 @@ struct  AuthenticationGatewayFirebase: AuthenticationGateway {
         self.firAuth = firAuth
     }
 
-    func register(name: String, email: String, password: String, birthdate: Date, completion: @escaping ((RegisterResult) -> Void)) {
-        firAuth.createUser(withEmail: email, password: password) { user, error in
+    func register(userParams: RegisterUserBasicParams, completion: @escaping ((RegisterResult) -> Void)) {
+        firAuth.createUser(withEmail: userParams.email, password: userParams.password) { user, error in
             if let authError = error {
                 let result = RegisterResult.failure(AuthenticationError(rawValue: authError._code))
                 completion(result)
@@ -19,7 +19,8 @@ struct  AuthenticationGatewayFirebase: AuthenticationGateway {
             }
 
             if let user = user {
-                let userEntity = self.generateUserEntity(identifier: user.uid, name: name, email: email, birthdate: birthdate)
+                let userEntity = self.generateUserEntity(identifier: user.uid, name: userParams.name,
+                                                         email: userParams.email, birthdate: userParams.birthdate)
                 self.saveUserData(userId: user.uid, userEntity: userEntity, completion: completion)
             }
         }

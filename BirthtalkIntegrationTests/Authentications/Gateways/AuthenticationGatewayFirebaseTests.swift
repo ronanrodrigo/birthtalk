@@ -42,7 +42,9 @@ class AuthenticationGatewayFirebaseTests: XCTestCase {
         var authenticationError: AuthenticationError?
         var createdUser: UserEntity?
 
-        gateway.register(name: userName, email: userEmail, password: userPassword, birthdate: userBirthdate) { result in
+        let userParams = RegisterUserBasicParams(name: userName, email: userEmail, password: userPassword,
+                                                 birthdate: userBirthdate)
+        gateway.register(userParams: userParams) { result in
             switch result {
             case let .success(user): createdUser = user
             case let .failure(error): authenticationError = error
@@ -65,9 +67,10 @@ class AuthenticationGatewayFirebaseTests: XCTestCase {
         var authenticationError: AuthenticationError?
         var createdUser: UserEntity?
 
-        gateway.register(name: userName, email: userEmail, password: userPassword, birthdate: userBirthdate) { _ in
-            self.gateway.register(name: self.userName, email: self.userEmail, password: self.userPassword,
-                                  birthdate: self.userBirthdate) { result in
+        let userParams = RegisterUserBasicParams(name: userName, email: userEmail, password: userPassword,
+                                                 birthdate: userBirthdate)
+        gateway.register(userParams: userParams) { _ in
+            self.gateway.register(userParams: userParams) { result in
                 switch result {
                 case let .success(user): createdUser = user
                 case let .failure(error): authenticationError = error

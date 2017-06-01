@@ -10,18 +10,18 @@ struct RegisterUserUsecase {
         self.presenter = presenter
     }
 
-    func register(name: String, email: String, password: String, birthdate: Date) {
+    func register(userParams: RegisterUserBasicParams) {
         let invalidInputs: [AuthenticationErrorValidator] = [
-            ValidateEmailEntity(email: email),
-            ValidateNameEntity(name: name),
-            ValidatePasswordEntity(password: password)]
+            ValidateEmailEntity(email: userParams.email),
+            ValidateNameEntity(name: userParams.name),
+            ValidatePasswordEntity(password: userParams.password)]
             .filter { !$0.isValid() }
 
         invalidInputs.forEach { presenter.failure(error: $0.error) }
 
         let isWithoutErrors = invalidInputs.count == 0
         if isWithoutErrors {
-            gateway.register(name: name, email: email, password: password, birthdate: birthdate, completion: presentResult)
+            gateway.register(userParams: userParams, completion: presentResult)
         }
     }
 
